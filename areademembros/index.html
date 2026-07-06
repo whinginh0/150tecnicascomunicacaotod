@@ -4,30 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Área de Membros - 150 Técnicas TOD</title>
-  <!-- Google Fonts Outfit para fonte arredondada e amigável -->
+  <!-- Google Fonts Outfit para fonte arredondada, moderna e amigável -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   
   <style>
     :root {
       --branco: #FFFFFF;
-      --off-white: #F0F7FF;
+      --off-white: #F0F7FF; /* Fundo azul bebê suave ~10% de opacidade */
       --preto: #2D2D2D;
-      --grafite: #4D4D4D;
+      --grafite: #555273;
       
       --azul-claro: #E0EFFF;
-      --azul-principal: #49A0E8;
+      --azul-principal: #49A0E8; /* Azul bebê principal */
       --azul-escuro: #2D8CD5;
       
-      --verde-claro: #C2F0D5;
-      --verde-texto: #278C4E;
+      --verde-claro: #E2FFF0;
+      --verde-texto: #27AE60;
       
-      --cinza-suave: #F3F4F6;
-      --cinza-borda: #E5E7EB;
+      --sombra-premium: 0 10px 28px rgba(30, 20, 50, 0.15), 0 3px 6px rgba(30, 20, 50, 0.08);
+      --sombra-hover: 0 18px 42px rgba(30, 20, 50, 0.22), 0 5px 12px rgba(30, 20, 50, 0.12);
       
-      --radius-md: 20px;
-      --radius-lg: 28px;
+      --radius-md: 18px;
+      --radius-lg: 24px;
     }
 
     * {
@@ -44,23 +44,33 @@
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
-      padding: 20px;
+      padding: 24px 16px;
     }
 
-    /* CONTAINER PRINCIPAL */
+    /* CONTAINER PRINCIPAL (ESTILO CARD CLEAN DA PG VENDAS) */
     .app-container {
       width: 100%;
-      max-width: 480px;
+      max-width: 420px;
       background-color: var(--branco);
       border-radius: var(--radius-lg);
-      border: 3.5px solid var(--preto);
-      box-shadow: 0 10px 0 rgba(73, 160, 232, 0.2);
-      padding: 32px 24px;
+      border: 1.5px solid #D5D5E6;
+      box-shadow: var(--sombra-premium);
+      padding: 36px 24px 28px 24px;
       margin: 20px auto;
       position: relative;
+      overflow: hidden;
     }
 
-    /* PÁGINA DE LOGIN */
+    /* Linha decorativa no topo para dar estilo igual ao card de 'O que você vai receber' */
+    .app-container::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4.5px;
+      background: linear-gradient(90deg, var(--azul-principal), #82C4FF);
+    }
+
+    /* TELA DE LOGIN */
     .view-login {
       display: flex;
       flex-direction: column;
@@ -69,104 +79,106 @@
     }
 
     .logo-area {
-      width: 80px;
-      height: 80px;
+      width: 64px;
+      height: 64px;
       background-color: var(--azul-claro);
-      border: 3px solid var(--preto);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 38px;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 0 var(--preto);
+      font-size: 28px;
+      margin-bottom: 24px;
     }
 
     h1 {
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 900;
       color: var(--preto);
-      margin-bottom: 8px;
-      line-height: 1.25;
+      margin-bottom: 10px;
+      line-height: 1.3;
+      letter-spacing: -0.5px;
     }
 
     .subtitle {
-      font-size: 14.5px;
-      color: #718096;
-      margin-bottom: 28px;
+      font-size: 13.5px;
+      color: #8A87A8;
+      margin-bottom: 32px;
       font-weight: 500;
+      line-height: 1.45;
     }
 
     .input-group {
       width: 100%;
       text-align: left;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
 
     label {
-      font-weight: 800;
-      font-size: 13px;
+      font-weight: 700;
+      font-size: 12.5px;
       color: var(--preto);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
       display: block;
       margin-bottom: 8px;
     }
 
     input[type="email"] {
       width: 100%;
-      padding: 14px 18px;
+      padding: 13px 18px;
       border-radius: 50px;
-      border: 3px solid var(--preto);
-      font-size: 15px;
+      border: 1.5px solid #D5D5E6;
+      font-size: 14.5px;
       font-weight: 600;
       color: var(--preto);
       outline: none;
-      box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
-      transition: border-color 0.2s;
+      background-color: #FAF9FE;
+      transition: all 0.2s;
     }
 
     input[type="email"]:focus {
       border-color: var(--azul-principal);
+      background-color: var(--branco);
+      box-shadow: 0 0 0 3px rgba(73, 160, 232, 0.15);
     }
 
     .btn-submit {
       width: 100%;
       padding: 14px 24px;
-      background: linear-gradient(135deg, var(--azul-principal), var(--azul-escuro));
+      background-color: var(--azul-principal);
       color: var(--branco);
-      border: 3px solid var(--preto);
+      border: none;
       border-radius: 50px;
-      font-size: 15px;
-      font-weight: 900;
+      font-size: 14.5px;
+      font-weight: 800;
       cursor: pointer;
-      box-shadow: 0 4px 0 var(--preto);
-      transition: all 0.15s;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-top: 8px;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(73, 160, 232, 0.25);
+    }
+
+    .btn-submit:hover {
+      background-color: var(--azul-escuro);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(73, 160, 232, 0.35);
     }
 
     .btn-submit:active {
-      transform: translateY(3px);
-      box-shadow: 0 1px 0 var(--preto);
+      transform: translateY(0);
     }
 
     .alert-error {
-      background-color: #FED7D7;
-      color: #C53030;
-      border: 2px solid var(--preto);
+      background-color: #FFF2F2;
+      color: #E53E3E;
+      border: 1.5px solid #FED7D7;
       padding: 12px;
       border-radius: 12px;
-      font-size: 13.5px;
+      font-size: 13px;
       font-weight: 700;
       width: 100%;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
       display: none;
       text-align: center;
     }
 
-    /* PÁGINA DE DASHBOARD */
+    /* TELA DE DASHBOARD */
     .view-dashboard {
       display: none;
     }
@@ -175,49 +187,52 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 24px;
-      border-bottom: 3.5px dashed var(--azul-claro);
-      padding-bottom: 16px;
+      margin-bottom: 28px;
+      border-bottom: 1.5px solid #F0F0F5;
+      padding-bottom: 18px;
+    }
+
+    .user-info {
+      text-align: left;
     }
 
     .user-info h2 {
       font-size: 18px;
       font-weight: 900;
       color: var(--preto);
+      letter-spacing: -0.3px;
     }
 
     .user-info p {
       font-size: 12px;
-      color: #718096;
+      color: #8A87A8;
       font-weight: 600;
     }
 
     .btn-logout {
       background: none;
-      border: 2px solid var(--preto);
+      border: 1.5px solid #E2E2EC;
       border-radius: 50px;
       padding: 6px 14px;
       font-size: 11px;
-      font-weight: 800;
+      font-weight: 700;
+      color: var(--grafite);
       cursor: pointer;
-      text-transform: uppercase;
-      box-shadow: 2px 2px 0 var(--preto);
-      transition: all 0.15s;
+      transition: all 0.2s;
     }
 
-    .btn-logout:active {
-      transform: translateY(1px);
-      box-shadow: 1px 1px 0 var(--preto);
+    .btn-logout:hover {
+      background-color: #FAF9FE;
+      border-color: #D5D5E6;
     }
 
-    /* PROGRESSO */
+    /* BARRA DE PROGRESSO */
     .progress-section {
-      background-color: var(--azul-claro);
-      border: 3px solid var(--preto);
+      background-color: #FAF9FE;
+      border: 1.5px solid #E2E2EC;
       border-radius: var(--radius-md);
       padding: 16px;
-      margin-bottom: 24px;
-      box-shadow: 3px 3px 0 var(--preto);
+      margin-bottom: 28px;
     }
 
     .progress-header {
@@ -228,23 +243,23 @@
     }
 
     .progress-title {
-      font-size: 13px;
-      font-weight: 900;
-      color: var(--preto);
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #8A87A8;
       text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
     .progress-percent {
-      font-size: 14px;
-      font-weight: 900;
-      color: var(--preto);
+      font-size: 13.5px;
+      font-weight: 800;
+      color: var(--azul-escuro);
     }
 
     .progress-bar-bg {
       width: 100%;
-      height: 12px;
-      background-color: var(--branco);
-      border: 2px solid var(--preto);
+      height: 8px;
+      background-color: #EBEBF3;
       border-radius: 10px;
       overflow: hidden;
     }
@@ -253,6 +268,7 @@
       height: 100%;
       background-color: var(--verde-texto);
       width: 0%;
+      border-radius: 10px;
       transition: width 0.3s ease;
     }
 
@@ -264,42 +280,52 @@
     }
 
     .deliverable-card {
-      border: 3px solid var(--preto);
+      border: 1.5px solid #D5D5E6;
       border-radius: var(--radius-md);
       padding: 16px;
       display: flex;
       flex-direction: column;
       gap: 14px;
-      box-shadow: 4px 4px 0 var(--preto);
+      box-shadow: 0 8px 24px rgba(30, 20, 50, 0.06);
       background-color: var(--branco);
-      transition: transform 0.2s, box-shadow 0.2s;
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .deliverable-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3.5px;
+      background-color: var(--card-theme, var(--azul-principal));
+      border-radius: var(--radius-md) var(--radius-md) 0 0;
+    }
+
+    .deliverable-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--sombra-hover);
     }
 
     .deliverable-card.completed {
-      background-color: #F6FFF9;
-      border-color: #1A7F41;
-      box-shadow: 4px 4px 0 #1A7F41;
+      border-color: #C2F0D5;
+      box-shadow: 0 8px 24px rgba(39, 174, 96, 0.08);
     }
 
     .deliverable-top {
       display: flex;
-      gap: 12px;
+      gap: 14px;
       align-items: flex-start;
     }
 
     .deliverable-img {
-      width: 70px;
-      height: 96px;
+      width: 64px;
+      height: 90px;
       object-fit: cover;
-      border-radius: 8px;
-      border: 2px solid var(--preto);
+      border-radius: 10px;
+      border: 1px solid #E2E2EC;
       flex-shrink: 0;
-      box-shadow: 2px 2px 0 var(--preto);
-    }
-
-    .deliverable-card.completed .deliverable-img {
-      border-color: #1A7F41;
-      box-shadow: 2px 2px 0 #1A7F41;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
     }
 
     .deliverable-info {
@@ -313,31 +339,25 @@
     .deliverable-tag {
       font-size: 9.5px;
       font-weight: 800;
-      background-color: var(--azul-claro);
-      color: var(--azul-texto);
+      background-color: #FAF9FE;
+      color: #8A87A8;
       padding: 2px 8px;
       border-radius: 50px;
       align-self: flex-start;
-      border: 1.5px solid var(--preto);
-    }
-
-    .deliverable-card.completed .deliverable-tag {
-      background-color: var(--verde-claro);
-      color: var(--verde-texto);
-      border-color: #1A7F41;
+      border: 1px solid #E2E2EC;
     }
 
     .deliverable-info h3 {
-      font-size: 14.5px;
-      font-weight: 900;
+      font-size: 14px;
+      font-weight: 800;
       color: var(--preto);
-      line-height: 1.25;
+      line-height: 1.35;
     }
 
     .deliverable-info p {
-      font-size: 11.5px;
-      color: #64748B;
-      line-height: 1.35;
+      font-size: 11px;
+      color: #8A87A8;
+      line-height: 1.45;
       font-weight: 500;
     }
 
@@ -345,13 +365,9 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-top: 2px dashed var(--cinza-borda);
+      border-top: 1.5px solid #F0F0F5;
       padding-top: 12px;
       gap: 12px;
-    }
-
-    .deliverable-card.completed .deliverable-bottom {
-      border-top-color: #C2F0D5;
     }
 
     .btn-download {
@@ -359,33 +375,24 @@
       align-items: center;
       gap: 6px;
       padding: 8px 16px;
-      background-color: var(--branco);
-      border: 2px solid var(--preto);
+      background-color: var(--azul-principal);
+      border: none;
       border-radius: 50px;
-      font-size: 12px;
+      font-size: 11.5px;
       font-weight: 800;
-      color: var(--preto);
+      color: var(--branco);
       text-decoration: none;
-      box-shadow: 2px 2px 0 var(--preto);
       cursor: pointer;
-      transition: all 0.15s;
+      transition: all 0.2s;
+      box-shadow: 0 3px 8px rgba(73, 160, 232, 0.2);
     }
 
     .btn-download:hover {
-      background-color: var(--cinza-suave);
+      background-color: var(--azul-escuro);
+      transform: translateY(-1px);
     }
 
-    .btn-download:active {
-      transform: translateY(2px);
-      box-shadow: 0 0 0 var(--preto);
-    }
-
-    .deliverable-card.completed .btn-download {
-      border-color: #1A7F41;
-      box-shadow: 2px 2px 0 #1A7F41;
-    }
-
-    /* CHECKBOX CUSTOMIZADO */
+    /* CHECKBOX CUSTOMIZADO ESTILO CLEAN */
     .checkbox-container {
       display: flex;
       align-items: center;
@@ -398,20 +405,20 @@
     }
 
     .checkbox-box {
-      width: 24px;
-      height: 24px;
-      border: 2px solid var(--preto);
-      border-radius: 6px;
+      width: 20px;
+      height: 20px;
+      border: 1.5px solid #D5D5E6;
+      border-radius: 5px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: var(--branco);
-      transition: background-color 0.2s, border-color 0.2s;
+      background-color: #FAF9FE;
+      transition: all 0.2s;
     }
 
     .checkbox-box::after {
       content: '✓';
-      font-size: 14px;
+      font-size: 11px;
       font-weight: 900;
       color: var(--branco);
       display: none;
@@ -426,16 +433,16 @@
       display: block;
     }
 
-    .deliverable-card.completed .checkbox-box {
-      border-color: #1A7F41;
-    }
-
     .checkbox-label {
       font-size: 11px;
-      font-weight: 800;
-      color: var(--preto);
+      font-weight: 700;
+      color: #8A87A8;
       margin-left: 8px;
-      text-transform: uppercase;
+    }
+
+    .checkbox-input:checked ~ .checkbox-label {
+      color: var(--verde-texto);
+      font-weight: 800;
     }
   </style>
 </head>
@@ -446,14 +453,14 @@
     <!-- TELA DE LOGIN (EMAIL) -->
     <div class="view-login" id="view-login">
       <div class="logo-area">📖</div>
-      <h1>Acesse sua Área de Membros</h1>
-      <p class="subtitle">Insira o e-mail cadastrado na compra para baixar seus materiais.</p>
+      <h1>Área de Membros</h1>
+      <p class="subtitle">Insira o e-mail cadastrado na compra para ter acesso aos seus materiais e bônus.</p>
       
-      <div class="alert-error" id="error-alert">E-mail inválido ou não cadastrado.</div>
+      <div class="alert-error" id="error-alert">Por favor, insira um e-mail válido.</div>
       
       <div class="input-group">
-        <label for="user-email">Seu E-mail de Compra</label>
-        <input type="email" id="user-email" placeholder="exemplo@email.com" required>
+        <label for="user-email">E-mail de Compra</label>
+        <input type="email" id="user-email" placeholder="seu-email@exemplo.com" required>
       </div>
       
       <button class="btn-submit" id="btn-login">Entrar</button>
@@ -463,7 +470,7 @@
     <div class="view-dashboard" id="view-dashboard">
       <div class="header-dashboard">
         <div class="user-info">
-          <h2>Seus Materiais</h2>
+          <h2>Seus Livros</h2>
           <p id="display-email">email@exemplo.com</p>
         </div>
         <button class="btn-logout" id="btn-logout">Sair</button>
@@ -495,7 +502,8 @@
         id: 1,
         title: "150 Técnicas de Comunicação para Crianças e Jovens com TOD",
         description: "Guia principal completo com todas as 150 técnicas práticas organizadas e ilustradas.",
-        tag: "Principal",
+        tag: "Material Principal",
+        theme: "#49A0E8", // Azul
         cover: "https://i.ibb.co/XZfVz2zB/produto-principal-pagina-01.jpg",
         fileUrl: "entregavel - 150 tecnicas/150_tecnicas_comunicacao_TOD_COMPLETO_A4_MARGEM_AJUSTADA.pdf"
       },
@@ -504,14 +512,16 @@
         title: "Bônus 1: Kit de Atividades para Momentos de Crise",
         description: "Atividades práticas para acalmar conflitos e guiar momentos de pico de irritabilidade.",
         tag: "Bônus 1",
+        theme: "#E85D75", // Coral
         cover: "https://i.ibb.co/mChvQ8tf/bonus1.png",
-        fileUrl: "entregavel - 150 tecnicas/BONUS1_Kit_de_Atividades_para_Momentos_de_Crise.pdf"
+        fileUrl: "entregavel - 150 tecnicas/BONUS1_Kit_de_Atividades_para_Momoments_de_Crise.pdf"
       },
       {
         id: 3,
         title: "Bônus 2: Caderno de Combinados da Escola e de Casa",
         description: "Modelo visual e pronto para imprimir com regras claras e combinados de convivência.",
         tag: "Bônus 2",
+        theme: "#F5A623", // Laranja
         cover: "https://i.ibb.co/Sw0cBr6r/bonus2.png",
         fileUrl: "entregavel - 150 tecnicas/bonus_2_caderno_de_combinados_escola_e_casa.pdf"
       },
@@ -520,6 +530,7 @@
         title: "Bônus 3: Cartões de Expressão Emocional",
         description: "Ilustrações didáticas em cartões para a criança indicar o que está sentindo.",
         tag: "Bônus 3",
+        theme: "#2D9CDB", // Azul Médio
         cover: "https://i.ibb.co/d0bCS6VG/bonus3.png",
         fileUrl: "entregavel - 150 tecnicas/BONUS3_Cartoes_de_Expressao_Emocional.pdf"
       },
@@ -528,6 +539,7 @@
         title: "Bônus 4: Manual de Interação com Outras Crianças",
         description: "Estratégias de cooperação social para convivência saudável e comunicação coletiva.",
         tag: "Bônus 4",
+        theme: "#9B51E0", // Roxo
         cover: "https://i.ibb.co/TBSPRkms/bonus4.png",
         fileUrl: "entregavel - 150 tecnicas/BONUS4_Manual_de_Interacao_com_Outras_Criancas.pdf"
       }
@@ -549,7 +561,7 @@
     const STORAGE_EMAIL_KEY = 'member_login_email';
     const STORAGE_PROGRESS_KEY_PREFIX = 'progress_member_';
 
-    // Roteamento baseado em Hash / URL Slug
+    // Roteamento baseado em Hash
     function checkRoute() {
       const hash = window.location.hash;
       const loggedEmail = localStorage.getItem(STORAGE_EMAIL_KEY);
@@ -607,7 +619,7 @@
       navigateTo('#/login');
     });
 
-    // Validar e-mail de compra (validação padrão simples + garante não vazio)
+    // Validar e-mail de compra
     function validateEmail(email) {
       if (!email) return false;
       const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -624,12 +636,13 @@
         const card = document.createElement('div');
         card.className = `deliverable-card ${isCompleted ? 'completed' : ''}`;
         card.id = `card-${material.id}`;
+        card.style.setProperty('--card-theme', material.theme);
         
         card.innerHTML = `
           <div class="deliverable-top">
             <img class="deliverable-img" src="${material.cover}" alt="Capa">
             <div class="deliverable-info">
-              <span class="deliverable-tag">${material.tag}</span>
+              <span class="deliverable-tag" style="color: ${material.theme}; background-color: ${material.theme}10; border-color: ${material.theme}25">${material.tag}</span>
               <h3>${material.title}</h3>
               <p>${material.description}</p>
             </div>
@@ -638,10 +651,10 @@
             <label class="checkbox-container">
               <input type="checkbox" class="checkbox-input" data-id="${material.id}" ${isCompleted ? 'checked' : ''}>
               <span class="checkbox-box"></span>
-              <span class="checkbox-label">${isCompleted ? 'Concluído' : 'Marcar concluído'}</span>
+              <span class="checkbox-label">${isCompleted ? 'Concluído' : 'Concluir'}</span>
             </label>
-            <a href="${material.fileUrl}" class="btn-download" target="_blank" download>
-              <span>📥 Baixar PDF</span>
+            <a href="${material.fileUrl}" class="btn-download" style="background-color: ${material.theme}; box-shadow: 0 4px 10px ${material.theme}25" target="_blank" download>
+              <span>Baixar PDF</span>
             </a>
           </div>
         `;
@@ -651,13 +664,12 @@
         checkbox.addEventListener('change', (e) => {
           setCompletionState(email, material.id, e.target.checked);
           
-          // Toggle nas classes do card
           if (e.target.checked) {
             card.classList.add('completed');
             card.querySelector('.checkbox-label').textContent = 'Concluído';
           } else {
             card.classList.remove('completed');
-            card.querySelector('.checkbox-label').textContent = 'Marcar concluído';
+            card.querySelector('.checkbox-label').textContent = 'Concluir';
           }
           
           updateProgress(email);
