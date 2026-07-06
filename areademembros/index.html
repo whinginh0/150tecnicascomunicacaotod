@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área de Membros - 150 Técnicas TOD</title>
+  <!-- Google Fonts Outfit para fonte arredondada e amigável -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --branco: #FFFFFF;
+      --off-white: #F0F7FF;
+      --preto: #2D2D2D;
+      --grafite: #4D4D4D;
+      
+      --azul-claro: #E0EFFF;
+      --azul-principal: #49A0E8;
+      --azul-escuro: #2D8CD5;
+      
+      --verde-claro: #C2F0D5;
+      --verde-texto: #278C4E;
+      
+      --cinza-suave: #F3F4F6;
+      --cinza-borda: #E5E7EB;
+      
+      --radius-md: 20px;
+      --radius-lg: 28px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    body {
+      background-color: var(--off-white);
+      color: var(--grafite);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    /* CONTAINER PRINCIPAL */
+    .app-container {
+      width: 100%;
+      max-width: 480px;
+      background-color: var(--branco);
+      border-radius: var(--radius-lg);
+      border: 3.5px solid var(--preto);
+      box-shadow: 0 10px 0 rgba(73, 160, 232, 0.2);
+      padding: 32px 24px;
+      margin: 20px auto;
+      position: relative;
+    }
+
+    /* PÁGINA DE LOGIN */
+    .view-login {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .logo-area {
+      width: 80px;
+      height: 80px;
+      background-color: var(--azul-claro);
+      border: 3px solid var(--preto);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 38px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 0 var(--preto);
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--preto);
+      margin-bottom: 8px;
+      line-height: 1.25;
+    }
+
+    .subtitle {
+      font-size: 14.5px;
+      color: #718096;
+      margin-bottom: 28px;
+      font-weight: 500;
+    }
+
+    .input-group {
+      width: 100%;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: 800;
+      font-size: 13px;
+      color: var(--preto);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input[type="email"] {
+      width: 100%;
+      padding: 14px 18px;
+      border-radius: 50px;
+      border: 3px solid var(--preto);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--preto);
+      outline: none;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+      transition: border-color 0.2s;
+    }
+
+    input[type="email"]:focus {
+      border-color: var(--azul-principal);
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 14px 24px;
+      background: linear-gradient(135deg, var(--azul-principal), var(--azul-escuro));
+      color: var(--branco);
+      border: 3px solid var(--preto);
+      border-radius: 50px;
+      font-size: 15px;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 4px 0 var(--preto);
+      transition: all 0.15s;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 8px;
+    }
+
+    .btn-submit:active {
+      transform: translateY(3px);
+      box-shadow: 0 1px 0 var(--preto);
+    }
+
+    .alert-error {
+      background-color: #FED7D7;
+      color: #C53030;
+      border: 2px solid var(--preto);
+      padding: 12px;
+      border-radius: 12px;
+      font-size: 13.5px;
+      font-weight: 700;
+      width: 100%;
+      margin-bottom: 16px;
+      display: none;
+      text-align: center;
+    }
+
+    /* PÁGINA DE DASHBOARD */
+    .view-dashboard {
+      display: none;
+    }
+
+    .header-dashboard {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      border-bottom: 3.5px dashed var(--azul-claro);
+      padding-bottom: 16px;
+    }
+
+    .user-info h2 {
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--preto);
+    }
+
+    .user-info p {
+      font-size: 12px;
+      color: #718096;
+      font-weight: 600;
+    }
+
+    .btn-logout {
+      background: none;
+      border: 2px solid var(--preto);
+      border-radius: 50px;
+      padding: 6px 14px;
+      font-size: 11px;
+      font-weight: 800;
+      cursor: pointer;
+      text-transform: uppercase;
+      box-shadow: 2px 2px 0 var(--preto);
+      transition: all 0.15s;
+    }
+
+    .btn-logout:active {
+      transform: translateY(1px);
+      box-shadow: 1px 1px 0 var(--preto);
+    }
+
+    /* PROGRESSO */
+    .progress-section {
+      background-color: var(--azul-claro);
+      border: 3px solid var(--preto);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      margin-bottom: 24px;
+      box-shadow: 3px 3px 0 var(--preto);
+    }
+
+    .progress-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .progress-title {
+      font-size: 13px;
+      font-weight: 900;
+      color: var(--preto);
+      text-transform: uppercase;
+    }
+
+    .progress-percent {
+      font-size: 14px;
+      font-weight: 900;
+      color: var(--preto);
+    }
+
+    .progress-bar-bg {
+      width: 100%;
+      height: 12px;
+      background-color: var(--branco);
+      border: 2px solid var(--preto);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background-color: var(--verde-texto);
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    /* LISTA DE ENTREGÁVEIS */
+    .deliverables-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .deliverable-card {
+      border: 3px solid var(--preto);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      box-shadow: 4px 4px 0 var(--preto);
+      background-color: var(--branco);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .deliverable-card.completed {
+      background-color: #F6FFF9;
+      border-color: #1A7F41;
+      box-shadow: 4px 4px 0 #1A7F41;
+    }
+
+    .deliverable-top {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .deliverable-img {
+      width: 70px;
+      height: 96px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 2px solid var(--preto);
+      flex-shrink: 0;
+      box-shadow: 2px 2px 0 var(--preto);
+    }
+
+    .deliverable-card.completed .deliverable-img {
+      border-color: #1A7F41;
+      box-shadow: 2px 2px 0 #1A7F41;
+    }
+
+    .deliverable-info {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      text-align: left;
+    }
+
+    .deliverable-tag {
+      font-size: 9.5px;
+      font-weight: 800;
+      background-color: var(--azul-claro);
+      color: var(--azul-texto);
+      padding: 2px 8px;
+      border-radius: 50px;
+      align-self: flex-start;
+      border: 1.5px solid var(--preto);
+    }
+
+    .deliverable-card.completed .deliverable-tag {
+      background-color: var(--verde-claro);
+      color: var(--verde-texto);
+      border-color: #1A7F41;
+    }
+
+    .deliverable-info h3 {
+      font-size: 14.5px;
+      font-weight: 900;
+      color: var(--preto);
+      line-height: 1.25;
+    }
+
+    .deliverable-info p {
+      font-size: 11.5px;
+      color: #64748B;
+      line-height: 1.35;
+      font-weight: 500;
+    }
+
+    .deliverable-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 2px dashed var(--cinza-borda);
+      padding-top: 12px;
+      gap: 12px;
+    }
+
+    .deliverable-card.completed .deliverable-bottom {
+      border-top-color: #C2F0D5;
+    }
+
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      background-color: var(--branco);
+      border: 2px solid var(--preto);
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--preto);
+      text-decoration: none;
+      box-shadow: 2px 2px 0 var(--preto);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .btn-download:hover {
+      background-color: var(--cinza-suave);
+    }
+
+    .btn-download:active {
+      transform: translateY(2px);
+      box-shadow: 0 0 0 var(--preto);
+    }
+
+    .deliverable-card.completed .btn-download {
+      border-color: #1A7F41;
+      box-shadow: 2px 2px 0 #1A7F41;
+    }
+
+    /* CHECKBOX CUSTOMIZADO */
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+      user-select: none;
+      cursor: pointer;
+    }
+
+    .checkbox-input {
+      display: none;
+    }
+
+    .checkbox-box {
+      width: 24px;
+      height: 24px;
+      border: 2px solid var(--preto);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--branco);
+      transition: background-color 0.2s, border-color 0.2s;
+    }
+
+    .checkbox-box::after {
+      content: '✓';
+      font-size: 14px;
+      font-weight: 900;
+      color: var(--branco);
+      display: none;
+    }
+
+    .checkbox-input:checked + .checkbox-box {
+      background-color: var(--verde-texto);
+      border-color: var(--verde-texto);
+    }
+
+    .checkbox-input:checked + .checkbox-box::after {
+      display: block;
+    }
+
+    .deliverable-card.completed .checkbox-box {
+      border-color: #1A7F41;
+    }
+
+    .checkbox-label {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--preto);
+      margin-left: 8px;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- TELA DE LOGIN (EMAIL) -->
+    <div class="view-login" id="view-login">
+      <div class="logo-area">📖</div>
+      <h1>Acesse sua Área de Membros</h1>
+      <p class="subtitle">Insira o e-mail cadastrado na compra para baixar seus materiais.</p>
+      
+      <div class="alert-error" id="error-alert">E-mail inválido ou não cadastrado.</div>
+      
+      <div class="input-group">
+        <label for="user-email">Seu E-mail de Compra</label>
+        <input type="email" id="user-email" placeholder="exemplo@email.com" required>
+      </div>
+      
+      <button class="btn-submit" id="btn-login">Entrar</button>
+    </div>
+
+    <!-- TELA DE DASHBOARD -->
+    <div class="view-dashboard" id="view-dashboard">
+      <div class="header-dashboard">
+        <div class="user-info">
+          <h2>Seus Materiais</h2>
+          <p id="display-email">email@exemplo.com</p>
+        </div>
+        <button class="btn-logout" id="btn-logout">Sair</button>
+      </div>
+
+      <!-- BARRA DE PROGRESSO -->
+      <div class="progress-section">
+        <div class="progress-header">
+          <span class="progress-title">Seu progresso</span>
+          <span class="progress-percent" id="progress-text">0%</span>
+        </div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="progress-bar"></div>
+        </div>
+      </div>
+
+      <!-- LISTA DE ENTREGÁVEIS -->
+      <div class="deliverables-list" id="deliverables-container">
+        <!-- Inseridos dinamicamente por JS -->
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // Configurações e dados dos materiais
+    const materials = [
+      {
+        id: 1,
+        title: "150 Técnicas de Comunicação para Crianças e Jovens com TOD",
+        description: "Guia principal completo com todas as 150 técnicas práticas organizadas e ilustradas.",
+        tag: "Principal",
+        cover: "https://i.ibb.co/XZfVz2zB/produto-principal-pagina-01.jpg",
+        fileUrl: "entregavel - 150 tecnicas/150_tecnicas_comunicacao_TOD_COMPLETO_A4_MARGEM_AJUSTADA.pdf"
+      },
+      {
+        id: 2,
+        title: "Bônus 1: Kit de Atividades para Momentos de Crise",
+        description: "Atividades práticas para acalmar conflitos e guiar momentos de pico de irritabilidade.",
+        tag: "Bônus 1",
+        cover: "https://i.ibb.co/mChvQ8tf/bonus1.png",
+        fileUrl: "entregavel - 150 tecnicas/BONUS1_Kit_de_Atividades_para_Momentos_de_Crise.pdf"
+      },
+      {
+        id: 3,
+        title: "Bônus 2: Caderno de Combinados da Escola e de Casa",
+        description: "Modelo visual e pronto para imprimir com regras claras e combinados de convivência.",
+        tag: "Bônus 2",
+        cover: "https://i.ibb.co/Sw0cBr6r/bonus2.png",
+        fileUrl: "entregavel - 150 tecnicas/bonus_2_caderno_de_combinados_escola_e_casa.pdf"
+      },
+      {
+        id: 4,
+        title: "Bônus 3: Cartões de Expressão Emocional",
+        description: "Ilustrações didáticas em cartões para a criança indicar o que está sentindo.",
+        tag: "Bônus 3",
+        cover: "https://i.ibb.co/d0bCS6VG/bonus3.png",
+        fileUrl: "entregavel - 150 tecnicas/BONUS3_Cartoes_de_Expressao_Emocional.pdf"
+      },
+      {
+        id: 5,
+        title: "Bônus 4: Manual de Interação com Outras Crianças",
+        description: "Estratégias de cooperação social para convivência saudável e comunicação coletiva.",
+        tag: "Bônus 4",
+        cover: "https://i.ibb.co/TBSPRkms/bonus4.png",
+        fileUrl: "entregavel - 150 tecnicas/BONUS4_Manual_de_Interacao_com_Outras_Criancas.pdf"
+      }
+    ];
+
+    // Elementos DOM
+    const viewLogin = document.getElementById('view-login');
+    const viewDashboard = document.getElementById('view-dashboard');
+    const btnLogin = document.getElementById('btn-login');
+    const btnLogout = document.getElementById('btn-logout');
+    const inputEmail = document.getElementById('user-email');
+    const errorAlert = document.getElementById('error-alert');
+    const displayEmail = document.getElementById('display-email');
+    const deliverablesContainer = document.getElementById('deliverables-container');
+    const progressBar = document.getElementById('progress-bar');
+    const progressText = document.getElementById('progress-text');
+
+    // Chaves de localStorage
+    const STORAGE_EMAIL_KEY = 'member_login_email';
+    const STORAGE_PROGRESS_KEY_PREFIX = 'progress_member_';
+
+    // Roteamento baseado em Hash / URL Slug
+    function checkRoute() {
+      const hash = window.location.hash;
+      const loggedEmail = localStorage.getItem(STORAGE_EMAIL_KEY);
+      
+      if (hash === '#/dashboard' && loggedEmail) {
+        showDashboard(loggedEmail);
+      } else {
+        showLogin();
+      }
+    }
+
+    // Navegar
+    function navigateTo(hash) {
+      window.location.hash = hash;
+    }
+
+    // Mostrar tela de login
+    function showLogin() {
+      viewDashboard.style.display = 'none';
+      viewLogin.style.display = 'flex';
+      errorAlert.style.display = 'none';
+      window.location.hash = '#/login';
+    }
+
+    // Mostrar dashboard
+    function showDashboard(email) {
+      displayEmail.textContent = email;
+      viewLogin.style.display = 'none';
+      viewDashboard.style.display = 'block';
+      renderDeliverables(email);
+      updateProgress(email);
+    }
+
+    // Efetuar Login
+    btnLogin.addEventListener('click', () => {
+      const email = inputEmail.value.trim();
+      if (validateEmail(email)) {
+        localStorage.setItem(STORAGE_EMAIL_KEY, email);
+        navigateTo('#/dashboard');
+      } else {
+        errorAlert.style.display = 'block';
+      }
+    });
+
+    // Permitir login ao apertar Enter
+    inputEmail.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        btnLogin.click();
+      }
+    });
+
+    // Logout
+    btnLogout.addEventListener('click', () => {
+      localStorage.removeItem(STORAGE_EMAIL_KEY);
+      navigateTo('#/login');
+    });
+
+    // Validar e-mail de compra (validação padrão simples + garante não vazio)
+    function validateEmail(email) {
+      if (!email) return false;
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
+    }
+
+    // Renderizar lista de materiais
+    function renderDeliverables(email) {
+      deliverablesContainer.innerHTML = '';
+      
+      materials.forEach(material => {
+        const isCompleted = getCompletionState(email, material.id);
+        
+        const card = document.createElement('div');
+        card.className = `deliverable-card ${isCompleted ? 'completed' : ''}`;
+        card.id = `card-${material.id}`;
+        
+        card.innerHTML = `
+          <div class="deliverable-top">
+            <img class="deliverable-img" src="${material.cover}" alt="Capa">
+            <div class="deliverable-info">
+              <span class="deliverable-tag">${material.tag}</span>
+              <h3>${material.title}</h3>
+              <p>${material.description}</p>
+            </div>
+          </div>
+          <div class="deliverable-bottom">
+            <label class="checkbox-container">
+              <input type="checkbox" class="checkbox-input" data-id="${material.id}" ${isCompleted ? 'checked' : ''}>
+              <span class="checkbox-box"></span>
+              <span class="checkbox-label">${isCompleted ? 'Concluído' : 'Marcar concluído'}</span>
+            </label>
+            <a href="${material.fileUrl}" class="btn-download" target="_blank" download>
+              <span>📥 Baixar PDF</span>
+            </a>
+          </div>
+        `;
+        
+        // Listener para o checkbox de progresso
+        const checkbox = card.querySelector('.checkbox-input');
+        checkbox.addEventListener('change', (e) => {
+          setCompletionState(email, material.id, e.target.checked);
+          
+          // Toggle nas classes do card
+          if (e.target.checked) {
+            card.classList.add('completed');
+            card.querySelector('.checkbox-label').textContent = 'Concluído';
+          } else {
+            card.classList.remove('completed');
+            card.querySelector('.checkbox-label').textContent = 'Marcar concluído';
+          }
+          
+          updateProgress(email);
+        });
+        
+        deliverablesContainer.appendChild(card);
+      });
+    }
+
+    // Obter estado de conclusão no localStorage
+    function getCompletionState(email, materialId) {
+      const key = STORAGE_PROGRESS_KEY_PREFIX + email;
+      const completedList = JSON.parse(localStorage.getItem(key)) || [];
+      return completedList.includes(materialId);
+    }
+
+    // Salvar estado de conclusão no localStorage
+    function setCompletionState(email, materialId, state) {
+      const key = STORAGE_PROGRESS_KEY_PREFIX + email;
+      let completedList = JSON.parse(localStorage.getItem(key)) || [];
+      
+      if (state) {
+        if (!completedList.includes(materialId)) {
+          completedList.push(materialId);
+        }
+      } else {
+        completedList = completedList.filter(id => id !== materialId);
+      }
+      
+      localStorage.setItem(key, JSON.stringify(completedList));
+    }
+
+    // Atualizar a barra de progresso
+    function updateProgress(email) {
+      const key = STORAGE_PROGRESS_KEY_PREFIX + email;
+      const completedList = JSON.parse(localStorage.getItem(key)) || [];
+      const percentage = Math.round((completedList.length / materials.length) * 100);
+      
+      progressBar.style.width = `${percentage}%`;
+      progressText.textContent = `${percentage}%`;
+    }
+
+    // Observar mudanças de hash
+    window.addEventListener('hashchange', checkRoute);
+    
+    // Inicializar na carga da página
+    checkRoute();
+  </script>
+</body>
+</html>
