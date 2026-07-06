@@ -1,8 +1,7 @@
 FROM nginx:alpine
 
-# Copiar os arquivos estáticos para o diretório padrão do Nginx
+# Copiar apenas o index.html (as imagens agora são servidas via links CDN)
 COPY index.html /usr/share/nginx/html/
-COPY assets/ /usr/share/nginx/html/assets/
 
 # Expor a porta 80 do container
 EXPOSE 80
