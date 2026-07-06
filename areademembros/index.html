@@ -12,6 +12,9 @@
   <!-- Canvas Confetti Library -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
+  <!-- Supabase JS Client SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
   <style>
     :root {
       --branco: #FFFFFF;
@@ -514,6 +517,46 @@
       stroke: var(--branco);
     }
 
+
+    .alert-error {
+      display: none;
+      background-color: #FFF2F2;
+      color: #D32F2F;
+      border: 1px solid #FFD8D8;
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* CARD BLOQUEADO */
+    .grid-card.locked {
+      opacity: 0.7;
+    }
+    .grid-card.locked:hover {
+      transform: none;
+      box-shadow: 0 10px 28px rgba(30, 20, 50, 0.15);
+      border-color: #D5D5E6;
+    }
+    .grid-card.locked .btn-open-material {
+      background-color: #A09EBE !important;
+      cursor: not-allowed;
+      pointer-events: none;
+      box-shadow: none !important;
+    }
+    .grid-card.locked .btn-check-circle {
+      border-color: #E2E2EC !important;
+      background-color: #FAF9FE !important;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+    .grid-card.locked .btn-check-circle svg {
+      stroke: #A09EBE !important;
+    }
+
     /* RESPONSIVIDADE MOBILE */
     @media (max-width: 768px) {
       .dashboard-wrapper {
@@ -702,6 +745,11 @@
       }
     ];
 
+    // Configurações Supabase
+    const SUPABASE_URL = "https://djuckwoewpqomaykgwzf.supabase.co";
+    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRqdWNrd29ld3Bxb21heWtnd3pmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODMzNjE3ODAsImV4cCI6MjA5ODkzNzc4MH0.Q3DYyVjIkM09xrNHAH3nSuis3bCD1ZINnIy0w9Fzit4";
+    const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
     // Elementos DOM
     const viewLoginWrapper = document.getElementById('view-login-wrapper');
     const viewDashboardWrapper = document.getElementById('view-dashboard-wrapper');
@@ -718,15 +766,19 @@
 
     // Chaves de localStorage
     const STORAGE_EMAIL_KEY = 'member_login_email';
+    const STORAGE_NAME_KEY = 'member_login_name';
+    const STORAGE_PLAN_KEY = 'member_login_plan';
     const STORAGE_PROGRESS_KEY_PREFIX = 'progress_member_';
 
     // Roteamento baseado em Hash
     function checkRoute() {
       const hash = window.location.hash;
       const loggedEmail = localStorage.getItem(STORAGE_EMAIL_KEY);
+      const loggedName = localStorage.getItem(STORAGE_NAME_KEY);
+      const loggedPlan = localStorage.getItem(STORAGE_PLAN_KEY);
       
-      if (hash === '#/dashboard' && loggedEmail) {
-        showDashboard(loggedEmail);
+      if (hash === '#/dashboard' && loggedEmail && loggedName && loggedPlan) {
+        showDashboard(loggedEmail, loggedName, loggedPlan);
       } else {
         showLogin();
       }
@@ -746,27 +798,67 @@
     }
 
     // Mostrar dashboard
-    function showDashboard(email) {
+    function showDashboard(email, name, plan) {
       displayEmail.textContent = email;
+      welcomeUser.textContent = `Olá, ${name}!`;
       
-      // Criar uma saudação baseada na primeira parte do email
-      const username = email.split('@')[0];
-      welcomeUser.textContent = `Olá, ${username}!`;
+      // Atualizar destaque do plano na barra lateral
+      const badge = document.querySelector('.sidebar-card-user span');
+      if (badge) {
+        if (plan === 'completo') {
+          badge.textContent = 'Plano Completo';
+          badge.style.backgroundColor = '#27AE60';
+        } else {
+          badge.textContent = 'Plano Básico';
+          badge.style.backgroundColor = 'var(--azul-escuro)';
+        }
+      }
       
       viewLoginWrapper.style.display = 'none';
       viewDashboardWrapper.style.display = 'flex';
-      renderDeliverables(email);
-      updateProgress(email);
+      renderDeliverables(email, plan);
+      updateProgress(email, plan);
     }
 
     // Efetuar Login
-    btnLogin.addEventListener('click', () => {
-      const email = inputEmail.value.trim();
-      if (validateEmail(email)) {
-        localStorage.setItem(STORAGE_EMAIL_KEY, email);
-        navigateTo('#/dashboard');
-      } else {
+    btnLogin.addEventListener('click', async () => {
+      const email = inputEmail.value.trim().toLowerCase();
+      if (!validateEmail(email)) {
+        errorAlert.textContent = 'E-mail inválido.';
         errorAlert.style.display = 'block';
+        return;
+      }
+      
+      const originalText = btnLogin.textContent;
+      btnLogin.textContent = 'Verificando...';
+      btnLogin.disabled = true;
+      errorAlert.style.display = 'none';
+      
+      try {
+        const { data, error } = await supabase
+          .from('clientes')
+          .select('email, nome, plano')
+          .eq('email', email)
+          .maybeSingle();
+          
+        if (error) throw error;
+        
+        if (data) {
+          localStorage.setItem(STORAGE_EMAIL_KEY, data.email);
+          localStorage.setItem(STORAGE_NAME_KEY, data.nome || data.email.split('@')[0]);
+          localStorage.setItem(STORAGE_PLAN_KEY, data.plano);
+          navigateTo('#/dashboard');
+        } else {
+          errorAlert.textContent = 'E-mail não cadastrado ou compra não encontrada.';
+          errorAlert.style.display = 'block';
+        }
+      } catch (err) {
+        console.error(err);
+        errorAlert.textContent = 'Erro ao conectar. Tente novamente.';
+        errorAlert.style.display = 'block';
+      } finally {
+        btnLogin.textContent = originalText;
+        btnLogin.disabled = false;
       }
     });
 
@@ -780,6 +872,8 @@
     // Logout
     btnLogout.addEventListener('click', () => {
       localStorage.removeItem(STORAGE_EMAIL_KEY);
+      localStorage.removeItem(STORAGE_NAME_KEY);
+      localStorage.removeItem(STORAGE_PLAN_KEY);
       navigateTo('#/login');
     });
 
@@ -801,58 +895,74 @@
     }
 
     // Renderizar lista de entregáveis no Grid
-    function renderDeliverables(email) {
+    function renderDeliverables(email, plan) {
       deliverablesContainer.innerHTML = '';
       
       materials.forEach(material => {
         const isCompleted = getCompletionState(email, material.id);
+        const isLocked = plan === 'basico' && material.id !== 1;
         
         const card = document.createElement('div');
-        card.className = 'grid-card';
+        card.className = `grid-card ${isLocked ? 'locked' : ''}`;
         card.style.setProperty('--card-color', material.theme);
         card.style.setProperty('--card-bg', material.theme + '15'); // 15 = ~8% opacidade para fundo pastel suave
         
         card.innerHTML = `
           <div class="grid-card-banner">
             <img class="grid-card-banner-img" src="${material.cover}" alt="Capa">
-            <span class="grid-card-tag">${material.tag}</span>
+            <span class="grid-card-tag">${material.tag} ${isLocked ? '(Bloqueado)' : ''}</span>
           </div>
           <div class="grid-card-body">
             <h3>${material.title}</h3>
             <p>${material.description}</p>
             <div class="grid-card-footer">
-              <a href="${material.fileUrl}" class="btn-open-material" style="background-color: ${material.theme}; box-shadow: 0 4px 12px ${material.theme}25" target="_blank" download>
-                <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="stroke-width:2.5;">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-                </svg>
-                <span>Abrir Material</span>
-              </a>
-              <div class="btn-check-circle ${isCompleted ? 'checked' : ''}" data-id="${material.id}" title="Marcar como concluído">
+              ${isLocked ? `
+                <button class="btn-open-material" style="background-color: #A09EBE;" disabled>
+                  <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="stroke-width:2.5;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                  </svg>
+                  <span>Bloqueado</span>
+                </button>
+              ` : `
+                <a href="${material.fileUrl}" class="btn-open-material" style="background-color: ${material.theme}; box-shadow: 0 4px 12px ${material.theme}25" target="_blank" download>
+                  <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="stroke-width:2.5;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                  </svg>
+                  <span>Abrir Material</span>
+                </a>
+              `}
+              <div class="btn-check-circle ${isCompleted ? 'checked' : ''}" data-id="${material.id}" title="${isLocked ? 'Indisponível' : 'Marcar como concluído'}">
                 <svg viewBox="0 0 24 24">
-                  <polyline points="20 6 9 17 4 12"></polyline>
+                  ${isLocked ? `
+                    <rect x="5" y="11" width="14" height="10" rx="2" ry="2" stroke-width="2.5" fill="none"></rect>
+                    <path d="M7 11V7a5 5 0 0110 0v4" stroke-width="2.5" fill="none"></path>
+                  ` : `
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  `}
                 </svg>
               </div>
             </div>
           </div>
         `;
         
-        // Listener para o botão de check (confetes e progresso)
-        const checkBtn = card.querySelector('.btn-check-circle');
-        checkBtn.addEventListener('click', () => {
-          const currentState = checkBtn.classList.contains('checked');
-          const newState = !currentState;
-          
-          setCompletionState(email, material.id, newState);
-          
-          if (newState) {
-            checkBtn.classList.add('checked');
-            triggerConfetti();
-          } else {
-            checkBtn.classList.remove('checked');
-          }
-          
-          updateProgress(email);
-        });
+        if (!isLocked) {
+          const checkBtn = card.querySelector('.btn-check-circle');
+          checkBtn.addEventListener('click', () => {
+            const currentState = checkBtn.classList.contains('checked');
+            const newState = !currentState;
+            
+            setCompletionState(email, material.id, newState);
+            
+            if (newState) {
+              checkBtn.classList.add('checked');
+              triggerConfetti();
+            } else {
+              checkBtn.classList.remove('checked');
+            }
+            
+            updateProgress(email, plan);
+          });
+        }
         
         deliverablesContainer.appendChild(card);
       });
@@ -882,14 +992,24 @@
     }
 
     // Atualizar a barra de progresso na sidebar
-    function updateProgress(email) {
+    function updateProgress(email, plan) {
       const key = STORAGE_PROGRESS_KEY_PREFIX + email;
       const completedList = JSON.parse(localStorage.getItem(key)) || [];
-      const percentage = Math.round((completedList.length / materials.length) * 100);
+      
+      const allowedMaterials = plan === 'basico' 
+        ? materials.filter(m => m.id === 1) 
+        : materials;
+        
+      const allowedCompleted = completedList.filter(id => 
+        allowedMaterials.some(m => m.id === id)
+      );
+      
+      const total = allowedMaterials.length;
+      const percentage = total > 0 ? Math.round((allowedCompleted.length / total) * 100) : 0;
       
       progressBar.style.width = `${percentage}%`;
       progressText.textContent = `${percentage}%`;
-      progressSubtext.textContent = `${completedList.length} de ${materials.length} concluídos`;
+      progressSubtext.textContent = `${allowedCompleted.length} de ${total} concluídos`;
     }
 
     // Observar mudanças de hash
