@@ -1,0 +1,2602 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="150 Técnicas de Comunicação para Crianças e Jovens com TOD. Melhore a convivência familiar com estratégias práticas e ilustradas.">
+  <title>150 Técnicas de Comunicação para Crianças e Jovens com TOD</title>
+  <!-- Google Fonts Outfit para fonte arredondada e amigável -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- ==================================================
+       CSS E ESTILIZAÇÃO DA PÁGINA (PEGADA INFANTIL PREMIUM)
+       ================================================== -->
+  <style>
+    :root {
+      /* Cores mais fortes e vibrantes com pegada infantil/educativa */
+      --branco: #FFFFFF;
+      --off-white: #FAF9FE;
+      --preto: #2D2D2D;
+      --grafite: #4D4D4D;
+
+      --roxo-claro: #EFE6FF;
+      --roxo-principal: #9C67FF;
+      --roxo-escuro: #7A3BFF;
+
+      --amarelo-claro: #FFF5C5;
+      --amarelo-destaque: #FFD214;
+      --amarelo-escuro: #E2B600;
+
+      --vermelho-claro: #FFD4D4;
+      --vermelho-texto: #E53E3E;
+
+      --verde-claro: #C2F0D5;
+      --verde-texto: #278C4E;
+
+      --azul-claro: #C4E3FF;
+      --azul-texto: #2575C0;
+
+      --laranja-claro: #FFE5C4;
+      --laranja-texto: #E86A15;
+
+      /* Sombras estilo 2D Cartoon/Edtech */
+      --bubble-shadow-sm: 0 4px 0px rgba(156, 103, 255, 0.15);
+      --bubble-shadow-md: 0 6px 0px rgba(156, 103, 255, 0.18);
+      --bubble-shadow-lg: 0 8px 0px rgba(156, 103, 255, 0.22);
+
+      --radius-sm: 14px;
+      --radius-md: 24px;
+      --radius-lg: 32px;
+    }
+
+    /* Reset e Configurações Gerais */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: 'Outfit', sans-serif;
+      background-color: #EFE6FF;
+      /* Fundo lúdico externo no desktop */
+      color: var(--grafite);
+      line-height: 1.45;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      background-color: var(--off-white);
+      max-width: 430px;
+      margin: 0 auto;
+      box-shadow: 0 0 50px rgba(122, 59, 255, 0.12);
+      position: relative;
+      overflow-x: hidden;
+      padding-top: 50px;
+      border-left: 4px solid var(--roxo-claro);
+      border-right: 4px solid var(--roxo-claro);
+    }
+
+    section {
+      width: 100%;
+      padding: 44px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Títulos Arredondados e Divertidos */
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: var(--preto);
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 15px;
+      color: var(--grafite);
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+
+    .section-title {
+      font-size: 26px;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      letter-spacing: -0.5px;
+    }
+
+    .section-subtitle {
+      font-size: 15px;
+      color: var(--grafite);
+      max-width: 340px;
+      margin-bottom: 28px;
+      font-weight: 500;
+    }
+
+    /* Botão CTA Principal estilo "Bolinha" com Sombra 3D de Jogo */
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 290px;
+      padding: 13px 20px;
+      background: linear-gradient(135deg, var(--amarelo-destaque), var(--amarelo-escuro));
+      color: var(--preto);
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 13.5px;
+      border-radius: 50px;
+      /* Bem arredondado, estilo infantil */
+      border: 3px solid var(--preto);
+      box-shadow: 0 4px 0 var(--preto);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      margin: 16px 0;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .btn-cta:active {
+      transform: translateY(3px);
+      box-shadow: 0 1px 0 var(--preto);
+    }
+
+    /* Efeito de balão piscando */
+    @keyframes pulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.03);
+      }
+    }
+
+    .pulse-btn {
+      animation: pulse 2.5s infinite ease-in-out;
+    }
+
+    /* Placeholders Lúdicos de Mockups (CSS) */
+    .img-placeholder-wrapper {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 8px 0 20px 0;
+      /* Espaçamento reduzido no topo para aproximar a imagem do texto */
+    }
+
+    .img-real {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Mockup Livro Didático Infantil */
+    .mockup-book {
+      width: 210px;
+      height: 290px;
+      background: linear-gradient(145deg, var(--roxo-principal), var(--roxo-escuro));
+      border-radius: 8px 24px 24px 8px;
+      box-shadow: -8px 12px 0px rgba(45, 45, 45, 0.15);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 22px 18px;
+      color: var(--branco);
+      border: 3px solid var(--preto);
+      margin: 20px auto;
+    }
+
+    /* Lombada do Livro */
+    .mockup-book::before {
+      content: '';
+      position: absolute;
+      left: 8px;
+      top: 0;
+      width: 6px;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.2);
+      z-index: 2;
+    }
+
+    .mockup-book::after {
+      content: '';
+      position: absolute;
+      left: 14px;
+      top: 0;
+      width: 3px;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.2);
+      z-index: 2;
+    }
+
+    .mockup-book .badge {
+      background-color: var(--amarelo-destaque);
+      color: var(--preto);
+      font-size: 11px;
+      font-weight: 800;
+      padding: 5px 12px;
+      border-radius: 20px;
+      align-self: center;
+      border: 2px solid var(--preto);
+      text-transform: uppercase;
+    }
+
+    .mockup-book .title {
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 1.2;
+      text-align: center;
+      margin-top: 10px;
+      color: var(--branco);
+      text-shadow: 2px 2px 0px var(--preto);
+    }
+
+    .mockup-book .subtitle {
+      font-size: 11px;
+      color: var(--amarelo-claro);
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: auto;
+      margin-top: 4px;
+    }
+
+    .mockup-book .art {
+      width: 100%;
+      height: 80px;
+      background-color: var(--branco);
+      border-radius: var(--radius-sm);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+      border: 2px solid var(--preto);
+      box-shadow: 3px 3px 0 var(--preto);
+      overflow: hidden;
+    }
+
+    .mockup-book .footer-tag {
+      font-size: 9px;
+      text-align: center;
+      color: var(--branco);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ==================================================
+       1. FAIXA FIXA NO TOPO
+       ================================================== */
+    .faixa-fixa {
+      position: absolute;
+      top: 0;
+      left: -4px;
+      width: calc(100% + 8px);
+      height: 50px;
+      background-color: var(--vermelho-texto);
+      border-bottom: 3px solid var(--preto);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 0 16px;
+    }
+
+    .faixa-fixa p {
+      margin: 0;
+      font-size: 13.5px;
+      font-weight: 800;
+      color: var(--branco);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .faixa-fixa .timer-counter {
+      background-color: var(--amarelo-destaque);
+      color: var(--preto);
+      padding: 3px 10px;
+      border-radius: 8px;
+      font-weight: 900;
+      font-variant-numeric: tabular-nums;
+      border: 2px solid var(--preto);
+      box-shadow: 2px 2px 0 var(--branco);
+    }
+
+    /* ==================================================
+       2. HERO SECTION
+       ================================================== */
+    .hero-section {
+      background: linear-gradient(180deg, var(--roxo-claro) 0%, var(--off-white) 100%);
+      padding-top: 36px;
+    }
+
+    .hero-title {
+      font-size: 33px;
+      line-height: 1.05;
+      /* Reduzido de 1.2 para aproximar as linhas de texto */
+      color: var(--preto);
+      font-weight: 900;
+      margin-bottom: 16px;
+      text-shadow: 1px 1px 0 var(--branco);
+    }
+
+    .hero-desc {
+      font-size: 15px;
+      line-height: 1.5;
+      color: var(--grafite);
+      margin-bottom: 8px;
+      /* Reduzido de 24px para 8px para aproximar do mockup */
+      max-width: 365px;
+      font-weight: 500;
+    }
+
+    .hero-microcopy {
+      font-size: 12px;
+      color: var(--grafite);
+      font-weight: 600;
+      opacity: 0.8;
+      margin-top: 4px;
+    }
+
+    /* ==================================================
+       3. SEÇÃO: PARA QUEM É ESTE MATERIAL?
+       ================================================== */
+    .para-quem-section {
+      background-color: var(--branco);
+    }
+
+    .pq-card {
+      width: 100%;
+      border-radius: var(--radius-md);
+      padding: 26px 20px;
+      margin-bottom: 20px;
+      text-align: center;
+      border: 3px solid var(--preto);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.2s;
+    }
+
+    .pq-card:active {
+      transform: scale(0.98);
+    }
+
+    .pq-card-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      background-color: var(--branco);
+      border: 2.5px solid var(--preto);
+      box-shadow: 2px 2px 0 var(--preto);
+    }
+
+    .pq-card.card-roxo {
+      background-color: var(--roxo-claro);
+      box-shadow: 0 6px 0 var(--roxo-principal);
+    }
+
+    .pq-card.card-roxo .pq-card-icon svg {
+      stroke: var(--roxo-escuro);
+    }
+
+    .pq-card.card-azul {
+      background-color: var(--azul-claro);
+      box-shadow: 0 6px 0 var(--azul-texto);
+    }
+
+    .pq-card.card-azul .pq-card-icon svg {
+      stroke: var(--azul-texto);
+    }
+
+    .pq-card.card-amarelo {
+      background-color: var(--amarelo-claro);
+      box-shadow: 0 6px 0 var(--amarelo-escuro);
+    }
+
+    .pq-card.card-amarelo .pq-card-icon svg {
+      stroke: var(--laranja-texto);
+    }
+
+    .pq-card.card-verde {
+      background-color: var(--verde-claro);
+      box-shadow: 0 6px 0 var(--verde-texto);
+    }
+
+    .pq-card.card-verde .pq-card-icon svg {
+      stroke: var(--verde-texto);
+    }
+
+    .pq-card h3 {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      line-height: 1.25;
+      color: var(--preto);
+    }
+
+    .pq-card p {
+      font-size: 14.5px;
+      color: var(--grafite);
+      margin: 0;
+      line-height: 1.45;
+      font-weight: 500;
+    }
+
+    /* ==================================================
+       4. SEÇÃO: O QUE VOCÊ VAI RECEBER
+       ================================================== */
+    .receber-section {
+      background-color: var(--off-white);
+      padding-bottom: 24px;
+    }
+
+    .receber-list {
+      width: 100%;
+      list-style: none;
+      margin-bottom: 35px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      text-align: left;
+      max-width: 380px;
+    }
+
+    .receber-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: #ffffff;
+      padding: 14px 16px;
+      border-radius: 18px;
+      border: 1.5px solid #D5D5E6;
+      box-shadow: 0 10px 28px rgba(30, 20, 50, 0.22), 0 3px 6px rgba(30, 20, 50, 0.12);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .receber-item::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3.5px;
+      border-radius: 18px 18px 0 0;
+      background: var(--receber-color, var(--roxo-claro));
+    }
+
+    .receber-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 42px rgba(30, 20, 50, 0.32), 0 5px 12px rgba(30, 20, 50, 0.18);
+    }
+
+    .receber-item-icon-wrap {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      line-height: 1;
+      background: var(--receber-color, var(--roxo-claro));
+    }
+
+    .receber-item-icon {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      color: var(--verde-texto);
+      margin-top: 1px;
+    }
+
+    .receber-item-text {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .receber-item span {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--preto);
+      line-height: 1.35;
+    }
+
+    .receber-item small {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: #555273; /* Cor mais escura para aumentar o contraste e legibilidade */
+    }
+
+    /* Carrosséis Marquee Verticais (Estilo Páginas Internas) */
+    .marquee-container-wrapper {
+      width: calc(100% + 48px);
+      margin: 15px -24px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .marquee-container {
+      width: 100%;
+      overflow: hidden;
+      padding: 12px 0;
+      /* Padding para evitar que as sombras e bordas inferiores sejam cortadas */
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      gap: 16px;
+    }
+
+    .marquee-left {
+      animation: marqueeLeft 25s linear infinite;
+    }
+
+    .marquee-right {
+      animation: marqueeRight 25s linear infinite;
+    }
+
+    @keyframes marqueeLeft {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    @keyframes marqueeRight {
+      0% {
+        transform: translateX(-50%);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    /* Placeholder Página do Booklet */
+    .page-card {
+      width: 125px;
+      height: 175px;
+      background-color: var(--branco);
+      border-radius: 12px;
+      border: 2px.5px solid var(--preto);
+      box-shadow: 3px 3px 0 rgba(45, 45, 45, 0.1);
+      padding: 12px 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+
+    .page-card-img {
+      width: 380px;
+      height: 537px;
+      border-radius: 14px;
+      border: 1.5px solid #EBEBF3;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      object-fit: cover;
+      object-position: top;
+      flex-shrink: 0;
+    }
+
+    .page-header {
+      height: 6px;
+      border-radius: 4px;
+      width: 40px;
+      background-color: var(--roxo-principal);
+    }
+
+    .page-body {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin: 12px 0;
+      flex-grow: 1;
+    }
+
+    .page-line-title {
+      height: 7px;
+      border-radius: 3px;
+      background-color: var(--preto);
+      opacity: 0.85;
+      width: 80%;
+    }
+
+    .page-line {
+      height: 4px;
+      border-radius: 2px;
+      background-color: var(--grafite);
+      opacity: 0.35;
+      width: 100%;
+    }
+
+    .page-line.short {
+      width: 60%;
+    }
+
+    .page-illustration {
+      height: 48px;
+      background-color: var(--off-white);
+      border-radius: 6px;
+      border: 2px dashed var(--roxo-principal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: auto;
+    }
+
+    .page-illustration svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--roxo-principal);
+    }
+
+    .page-footer-num {
+      font-size: 9px;
+      font-weight: 800;
+      color: var(--preto);
+      opacity: 0.5;
+      align-self: center;
+    }
+
+    /* ==================================================
+       5. SEÇÃO: BÔNUS GRATUITOS
+       ================================================== */
+    .bonus-section {
+      background-color: var(--branco);
+    }
+
+    .bonus-card {
+      width: 100%;
+      border-radius: 20px;
+      background-color: var(--branco);
+      border: 3px solid var(--preto);
+      box-shadow: 0 6px 0 var(--preto);
+      margin-bottom: 24px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .bonus-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      border-bottom: 2.5px solid var(--preto);
+    }
+
+    .bonus-card-header.h1 {
+      background: linear-gradient(135deg, #FFD6D6, #FFAEAE);
+    }
+
+    .bonus-card-header.h2 {
+      background: linear-gradient(135deg, #FFE8C8, #FFD099);
+    }
+
+    .bonus-card-header.h3 {
+      background: linear-gradient(135deg, #D6EEFF, #A8D8FF);
+    }
+
+    .bonus-card-header.h4 {
+      background: linear-gradient(135deg, #D6FFE8, #A8F0C6);
+    }
+
+    .bonus-num-label {
+      font-size: 12px;
+      font-weight: 900;
+      color: var(--preto);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .bonus-tag-gratis {
+      background-color: var(--verde-claro);
+      color: var(--verde-texto);
+      font-weight: 900;
+      font-size: 11px;
+      padding: 5px 12px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+      border: 2px solid var(--preto);
+      box-shadow: 2px 2px 0 var(--preto);
+    }
+
+    .bonus-card-img {
+      display: flex;
+      justify-content: center;
+      padding: 16px 12px 8px;
+      background: var(--off-white);
+    }
+
+    .bonus-card-img img {
+      max-width: 100%;
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .bonus-card-body {
+      padding: 14px 20px 20px;
+      text-align: left;
+    }
+
+    .bonus-card-body h3 {
+      font-size: 17px;
+      font-weight: 900;
+      margin-bottom: 8px;
+      color: var(--preto);
+      line-height: 1.3;
+    }
+
+    .bonus-card-body p {
+      font-size: 13.5px;
+      margin: 0;
+      color: var(--grafite);
+      line-height: 1.55;
+      font-weight: 500;
+    }
+
+    /* Wrapper sólido da área de bônus */
+    .bonus-cards-wrapper {
+      width: 100%;
+      background-color: #C0A0F8;
+      border-radius: 24px;
+      padding: 20px 16px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    /* Área de Soma de Valores - Estilo Recibo */
+    .soma-valores-container {
+      width: 100%;
+      margin-top: 8px;
+      background-color: var(--amarelo-destaque);
+      border: 3px solid var(--preto);
+      border-radius: 20px;
+      box-shadow: 0 6px 0 var(--preto);
+      padding: 20px 20px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .soma-valores-tag {
+      align-self: center;
+      background-color: var(--preto);
+      color: var(--amarelo-destaque);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 5px 16px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+
+    .soma-valores-titulo {
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--preto);
+      line-height: 1.3;
+      margin: 0 0 14px 0;
+    }
+
+    .soma-valores-linha {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1.5px solid rgba(0, 0, 0, 0.15);
+      gap: 12px;
+    }
+
+    .soma-valores-linha-nome {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--preto);
+      line-height: 1.3;
+    }
+
+    .soma-valores-linha-preco {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--grafite);
+      text-decoration: line-through;
+      white-space: nowrap;
+    }
+
+    .soma-valores-total-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+      margin-bottom: 14px;
+    }
+
+    .soma-valores-total-label {
+      font-size: 13px;
+      font-weight: 900;
+      color: var(--preto);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .soma-valores-total-box {
+      background-color: var(--branco);
+      border: 2.5px solid var(--preto);
+      border-radius: 10px;
+      padding: 5px 14px;
+      font-size: 14px;
+      font-weight: 900;
+      color: var(--preto);
+      box-shadow: 2px 2px 0 var(--preto);
+    }
+
+    .soma-valores-divider {
+      border: none;
+      border-top: 2.5px dashed rgba(0, 0, 0, 0.25);
+      margin: 0 0 12px 0;
+    }
+
+    .soma-valores-hoje-label {
+      font-size: 12px;
+      font-weight: 900;
+      color: var(--preto);
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 0 0 4px 0;
+    }
+
+    .soma-valores-hoje-preco {
+      font-size: 30px;
+      font-weight: 900;
+      color: var(--verde-texto);
+      text-align: center;
+      line-height: 1.1;
+      margin: 0;
+    }
+
+    /* ==================================================
+       NOVA SEÇÃO DO CRONÔMETRO DO PLANO
+       ================================================== */
+    .secao-cronometro {
+      background-color: var(--branco);
+      padding: 44px 24px 24px 24px;
+      border-top: 4px solid var(--roxo-claro);
+    }
+
+    .cronometro-tag {
+      font-size: 11px;
+      font-weight: 900;
+      color: var(--roxo-escuro);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .cronometro-title {
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 1.25;
+      color: var(--preto);
+      margin-bottom: 12px;
+    }
+
+    .cronometro-title .destaque {
+      position: relative;
+      display: inline-block;
+      color: var(--roxo-escuro);
+    }
+
+    .cronometro-title .destaque::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 2px;
+      width: 100%;
+      height: 6px;
+      background-color: var(--amarelo-destaque);
+      border-radius: 2px;
+      z-index: 1;
+    }
+
+    .cronometro-title .destaque span {
+      position: relative;
+      z-index: 2;
+    }
+
+    .cronometro-urgencia {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--vermelho-texto);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 26px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .timer-boxes-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .timer-box {
+      width: 85px;
+      height: 94px;
+      background: linear-gradient(135deg, var(--roxo-principal), var(--roxo-escuro));
+      border-radius: var(--radius-sm);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid var(--preto);
+      box-shadow: 0 5px 0 var(--preto);
+    }
+
+    .timer-box-num {
+      font-size: 34px;
+      font-weight: 900;
+      color: var(--amarelo-destaque);
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+      text-shadow: 2px 2px 0 var(--preto);
+    }
+
+    .timer-box-label {
+      font-size: 9px;
+      font-weight: 800;
+      color: var(--branco);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 6px;
+    }
+
+    .timer-separator {
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--preto);
+      margin-bottom: 12px;
+      align-self: center;
+      animation: flash 1s infinite;
+    }
+
+    /* ==================================================
+       6. SEÇÃO DE PLANOS
+       ================================================== */
+    .planos-section {
+      background-color: var(--off-white);
+      border-top: 4px solid var(--roxo-claro);
+    }
+
+    .planos-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .plano-card {
+      width: 100%;
+      background-color: var(--branco);
+      border-radius: var(--radius-lg);
+      border: 3px solid var(--preto);
+      box-shadow: 0 8px 0 var(--preto);
+      padding: 34px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      transition: transform 0.2s;
+    }
+
+    .plano-card:active {
+      transform: scale(0.98);
+    }
+
+    .plano-card.plano-completo-card {
+      background-color: var(--branco);
+      border-color: var(--roxo-principal);
+      box-shadow: 0 8px 0 var(--roxo-principal), 0 8px 0px 3px var(--preto);
+      border-width: 4px;
+    }
+
+    /* Estilo sutil para o Plano Básico (Menos ênfase) */
+    .plano-card.plano-basico-card {
+      padding: 24px 20px;
+      border: 2px solid #D1CCD9;
+      box-shadow: 0 4px 0 #D1CCD9;
+    }
+
+    .plano-basico-card .plano-title {
+      font-size: 20px;
+    }
+
+    .plano-basico-card .plano-desc {
+      font-size: 12.5px;
+      margin-bottom: 14px;
+    }
+
+    .plano-basico-card .plano-preco-box span {
+      font-size: 10px;
+    }
+
+    .plano-basico-card .plano-preco-valor {
+      font-size: 28px;
+    }
+
+    .plano-basico-card .plano-feature-item {
+      font-size: 12px;
+      gap: 6px;
+    }
+
+    .plano-basico-card .plano-feature-item svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    .plano-basico-card .btn-cta {
+      padding: 10px 16px;
+      font-size: 12px;
+    }
+
+    .plano-selo-mais-escolhido {
+      position: absolute;
+      top: -16px;
+      background: linear-gradient(135deg, var(--amarelo-destaque), var(--amarelo-escuro));
+      color: var(--preto);
+      font-size: 11px;
+      font-weight: 900;
+      padding: 6px 16px;
+      border-radius: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: 2.5px solid var(--preto);
+      box-shadow: 0 4px 0 var(--preto);
+    }
+
+    .plano-title {
+      font-size: 24px;
+      font-weight: 900;
+      margin-bottom: 6px;
+      color: var(--preto);
+    }
+
+    .plano-desc {
+      font-size: 14px;
+      color: var(--grafite);
+      margin-bottom: 22px;
+      max-width: 250px;
+      font-weight: 500;
+    }
+
+    .planos-features {
+      width: 100%;
+      list-style: none;
+      margin-bottom: 24px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .plano-feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .plano-feature-item svg {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      margin-top: 2px;
+    }
+
+    .plano-feature-item.inclui svg {
+      stroke: var(--verde-texto);
+      stroke-width: 3;
+    }
+
+    .plano-feature-item.nao-inclui svg {
+      stroke: #A19EB0;
+      stroke-width: 2.5;
+      width: 14px;
+      height: 14px;
+      margin-top: 3px;
+    }
+
+    .plano-feature-item.nao-inclui span {
+      color: #79768A;
+      font-weight: 500;
+      font-size: 12.5px;
+    }
+
+    /* Estilização do Box de Bônus embutido no Plano Completo */
+    .plano-bonus-box {
+      background-color: #BEA5F0;
+      border: 2px dashed var(--preto);
+      border-radius: 16px;
+      padding: 16px;
+      margin-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      text-align: left;
+    }
+
+    .plano-bonus-header {
+      font-size: 10.5px;
+      font-weight: 900;
+      color: var(--preto);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      line-height: 1.4;
+      text-align: center;
+      margin-bottom: 6px;
+    }
+
+    .plano-bonus-item {
+      background-color: var(--branco);
+      border: 2px solid var(--preto);
+      border-radius: 50px;
+      padding: 8px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 2px 2px 0 var(--preto);
+    }
+
+    .plano-bonus-icon {
+      width: 24px;
+      height: 24px;
+      background-color: #A98EE8;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      border: 1.5px solid var(--preto);
+      flex-shrink: 0;
+    }
+
+    .plano-bonus-name {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--preto);
+      line-height: 1.3;
+    }
+
+    .plano-divider {
+      width: 100%;
+      height: 3px;
+      background-color: var(--preto);
+      opacity: 0.15;
+      margin: 15px 0;
+    }
+
+    .plano-preco-box {
+      margin-bottom: 10px;
+    }
+
+    .plano-preco-box span {
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 800;
+      letter-spacing: 1px;
+      opacity: 0.75;
+      color: var(--grafite);
+    }
+
+    .plano-preco-valor {
+      font-size: 36px;
+      font-weight: 900;
+      color: var(--preto);
+      line-height: 1.1;
+      margin-top: 2px;
+    }
+
+    .plano-seguro-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      font-size: 11px;
+      color: var(--grafite);
+      opacity: 0.6;
+      margin-top: 8px;
+      font-weight: 500;
+    }
+
+    .plano-seguro-label svg {
+      flex-shrink: 0;
+      opacity: 0.7;
+    }
+
+    /* ==================================================
+       POP-UP DE UPGRADE (MODAL)
+       ================================================== */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(122, 59, 255, 0.4);
+      backdrop-filter: blur(4px);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-content {
+      background-color: var(--branco);
+      width: 100%;
+      max-width: 380px;
+      border-radius: var(--radius-lg);
+      border: 3.5px solid var(--preto);
+      box-shadow: 0 10px 0 var(--preto);
+      padding: 32px 24px 24px 24px;
+      position: relative;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: modalFadeIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    @keyframes modalFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: none;
+      border: 2px solid var(--preto);
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-color: var(--off-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--preto);
+    }
+
+    .modal-header-tag {
+      background-color: var(--amarelo-destaque);
+      color: var(--preto);
+      font-size: 11px;
+      font-weight: 900;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      border: 2px solid var(--preto);
+      box-shadow: 2px 2px 0 var(--preto);
+    }
+
+    .modal-title {
+      font-size: 22px;
+      font-weight: 900;
+      margin-bottom: 8px;
+      color: var(--preto);
+    }
+
+    .modal-text {
+      font-size: 14px;
+      color: var(--grafite);
+      margin-bottom: 16px;
+      line-height: 1.45;
+      font-weight: 500;
+    }
+
+    .modal-box-items {
+      width: 100%;
+      background-color: var(--off-white);
+      border-radius: var(--radius-sm);
+      border: 2.5px solid var(--preto);
+      padding: 14px;
+      margin-bottom: 18px;
+      text-align: left;
+    }
+
+    .modal-box-items p {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+      color: var(--roxo-escuro);
+    }
+
+    .modal-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .modal-list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--preto);
+    }
+
+    .modal-list-item svg {
+      flex-shrink: 0;
+      width: 16px;
+      height: 16px;
+      stroke: var(--verde-texto);
+      stroke-width: 3;
+      margin-top: 1px;
+    }
+
+    .modal-price-label {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      opacity: 0.8;
+    }
+
+    .modal-price-value {
+      font-size: 34px;
+      font-weight: 900;
+      color: var(--verde-texto);
+      margin-top: 2px;
+      margin-bottom: 14px;
+      text-shadow: 1px 1px 0 var(--branco);
+    }
+
+    .btn-upgrade-sim {
+      background: linear-gradient(135deg, var(--verde-claro), #38A169);
+      box-shadow: 0 6px 0 var(--preto);
+    }
+
+    .btn-upgrade-sim:active {
+      transform: translateY(4px);
+      box-shadow: 0 2px 0 var(--preto);
+    }
+
+    .btn-upgrade-nao {
+      background: none;
+      border: none;
+      color: var(--grafite);
+      font-size: 13px;
+      text-decoration: underline;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 8px;
+      padding: 6px;
+      opacity: 0.9;
+    }
+
+    /* ==================================================
+       7. SEÇÃO DE GARANTIA
+       ================================================== */
+    .garantia-section {
+      background-color: var(--branco);
+      border-top: 4px solid var(--roxo-claro);
+    }
+
+    .garantia-box {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      padding: 0;
+    }
+
+    /* Selo de Garantia CSS */
+    .garantia-seal {
+      width: 84px;
+      height: 84px;
+      background: radial-gradient(circle, var(--amarelo-destaque) 60%, var(--amarelo-escuro) 100%);
+      border-radius: 50%;
+      border: 3px solid var(--preto);
+      box-shadow: 3px 4px 0px var(--preto);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: var(--preto);
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .garantia-seal-num {
+      font-size: 28px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .garantia-tag {
+      font-size: 11.5px;
+      font-weight: 900;
+      color: var(--laranja-texto);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .sublinhado-amarelo {
+      border-bottom: 3.5px solid var(--amarelo-destaque);
+      padding-bottom: 1px;
+      font-weight: 800;
+      color: var(--preto);
+    }
+
+    .sublinhado-vermelho {
+      text-decoration: underline;
+      text-decoration-color: var(--vermelho-texto);
+      text-decoration-thickness: 3.5px;
+      text-underline-offset: 2px;
+      /* Controla a distância exata do traço sob o texto */
+      font-weight: 800;
+    }
+
+    /* Nova classe para destacar partes importantes dos títulos de seção com traçado colorido */
+    .destaque-titulo {
+      color: var(--title-color, var(--roxo-principal));
+      position: relative;
+      display: inline-block;
+      font-weight: 900;
+    }
+
+    .destaque-titulo::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 4px;
+      background: var(--underline-grad, linear-gradient(90deg, var(--roxo-claro), var(--rosa-destaque, #FF7BB0)));
+      border-radius: 2px;
+    }
+
+    .garantia-box h3 {
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--preto);
+    }
+
+    .garantia-box p {
+      font-size: 14.5px;
+      line-height: 1.55;
+      color: var(--grafite);
+      font-weight: 500;
+    }
+
+    .garantia-info-apoio {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--verde-texto);
+      margin: 0;
+    }
+
+    /* ==================================================
+       8. FAQ ACORDEÃO (BALÕES DIVERTIDOS)
+       ================================================== */
+    .faq-section {
+      background-color: var(--off-white);
+      border-top: 4px solid var(--roxo-claro);
+    }
+
+    .faq-container {
+      width: 100%;
+      max-width: 370px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .faq-item {
+      width: 100%;
+      background-color: var(--branco);
+      border-radius: 12px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      overflow: hidden;
+      transition: all 0.2s;
+    }
+
+    .faq-trigger {
+      width: 100%;
+      padding: 16px 20px;
+      background: none;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      text-align: left;
+      gap: 15px;
+    }
+
+    .faq-trigger h4 {
+      font-size: 15px;
+      font-weight: 700;
+      margin: 0;
+      color: var(--preto);
+      line-height: 1.35;
+    }
+
+    .faq-icon-svg {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      stroke: var(--roxo-escuro);
+      stroke-width: 2.5;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+      background-color: var(--off-white);
+    }
+
+    .faq-content p {
+      padding: 16px 20px;
+      margin: 0;
+      font-size: 14px;
+      color: var(--preto);
+      opacity: 1;
+      text-align: left;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+    /* Estado Aberto (FAQ) */
+    .faq-item.active {
+      box-shadow: 0 4px 12px rgba(122, 59, 255, 0.08);
+      transform: none;
+    }
+
+    .faq-item.active .faq-icon-svg {
+      transform: rotate(180deg);
+    }
+
+    .faq-item.active .faq-content {
+      max-height: 1000px;
+      transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    /* ==================================================
+       9. FOOTER
+       ================================================== */
+    .footer {
+      background-color: var(--roxo-escuro);
+      border-top: 4px solid var(--preto);
+      width: calc(100% + 8px);
+      margin-left: -4px;
+      margin-right: -4px;
+      margin-bottom: -4px;
+      /* Garante cobertura completa da base */
+      padding: 36px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: var(--amarelo-destaque);
+      text-decoration: underline;
+      font-weight: 700;
+    }
+
+    .footer-disclaimer {
+      font-size: 11px;
+      color: var(--branco);
+      opacity: 0.9;
+      max-width: 320px;
+      line-height: 1.45;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    .footer-copy {
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--branco);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==================================================
+       1. FAIXA FIXA NO TOPO
+       ================================================== -->
+  <div class="faixa-fixa">
+    <p>
+      <span>⚡</span>
+      Oferta limitada até:
+      <span class="timer-counter" id="timer">03:47:28</span>
+    </p>
+  </div>
+
+  <!-- ==================================================
+       2. HERO SECTION
+       ================================================== -->
+  <section class="hero-section">
+    <h1 class="hero-title">150 Técnicas de Comunicação para <span class="sublinhado-vermelho"
+        style="color: var(--roxo-escuro);">Crianças e Jovens com TOD</span></h1>
+    <p class="hero-desc">Prontas para aplicar no dia a dia, fortalecer a comunicação entre pais e filhos e ampliar o
+      repertório de estratégias através de técnicas práticas, organizadas e ilustradas para consulta rápida.</p>
+
+    <div class="img-placeholder-wrapper" style="width: calc(100% + 48px); margin: 8px -24px 20px -24px;">
+      <!-- Imagem real caso exista. O evento onError realiza fallback para a pág. 1 do diretório, e depois para o CSS -->
+      <img class="img-real" src="assets/mockup-principal.png" alt="Mockup Principal"
+        onerror="if(this.src.indexOf('mockup-principal.png') !== -1){ this.src='assets/01_produto_principal/produto-principal_pagina_01.jpg'; this.style.border='3px solid var(--preto)'; this.style.borderRadius='14px'; this.style.boxShadow='0 8px 0 var(--preto)'; } else { this.style.display='none'; document.getElementById('hero-mockup-fallback').style.display='flex'; }"
+        style="max-width: 100%; width: 100%; display: block; margin: 0 auto;">
+
+      <!-- Bloco visual CSS/SVG Premium (Placeholder com pegada infantil) -->
+      <div id="hero-mockup-fallback" class="mockup-book" style="display: none;">
+        <span class="badge">E-book Digital</span>
+        <div class="title">150 Técnicas de Comunicação</div>
+        <div class="subtitle">Guia Prático para Famílias</div>
+        <div class="art">
+          <!-- Ilustração Vetorial Lúdica de Sol e Família Feliz -->
+          <svg width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="40" r="16" fill="#FFD214" stroke="#2D2D2D" stroke-width="3" />
+            <path d="M50 15V22M50 58V65M25 40H32M68 40H75M32 22L37 27M63 22L58 27M32 58L37 53M63 58L58 53"
+              stroke="#2D2D2D" stroke-width="3" stroke-linecap="round" />
+            <path d="M30 85C30 75 38 70 45 70C52 70 54 75 54 85" stroke="#2D2D2D" stroke-width="4"
+              stroke-linecap="round" />
+            <path d="M55 85C55 78 60 74 65 74C70 74 72 78 72 85" stroke="#9C67FF" stroke-width="4"
+              stroke-linecap="round" />
+            <circle cx="43" cy="36" r="2" fill="#2D2D2D" />
+            <circle cx="51" cy="36" r="2" fill="#2D2D2D" />
+            <path d="M44 43C46 45 48 45 49 43" stroke="#2D2D2D" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </div>
+        <div class="footer-tag">Guia de Apoio Familiar</div>
+      </div>
+    </div>
+
+    <a href="#planos" class="btn-cta pulse-btn">QUERO ACESSAR O MATERIAL AGORA</a>
+    <span class="hero-microcopy">Acesso ao material digital após a confirmação.</span>
+  </section>
+
+  <!-- Imagem acima do "Para quem é este material?" -->
+  <div
+    style="background-color: var(--off-white); width: 100%; display: flex; justify-content: center; padding: 20px 0 0 0;">
+    <img src="assets/paraqueme.png" alt="Para quem é"
+      style="max-width: 90%; width: 340px; height: auto; display: block; border-radius: var(--radius-md);">
+  </div>
+
+  <!-- ==================================================
+       3. SEÇÃO: PARA QUEM É ESTE MATERIAL?
+       ================================================== -->
+  <section class="para-quem-section" style="padding-top: 20px;">
+    <h2 class="section-title">Para quem é <span class="destaque-titulo" style="--title-color: #2D9CDB; --underline-grad: linear-gradient(90deg, rgba(45, 156, 219, 0.1) 0%, rgba(45, 156, 219, 1) 100%);">este material?</span></h2>
+    <p class="section-subtitle">Este material foi desenvolvido para pais e mães que desejam melhorar a comunicação com
+      seus filhos, fortalecer a convivência familiar e contar com técnicas práticas para diferentes situações do dia a
+      dia.</p>
+
+    <!-- CARD 1 -->
+    <div class="pq-card card-roxo">
+      <div class="pq-card-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+      </div>
+      <h3>Pais que buscam novas formas de se comunicar</h3>
+      <p>Para quem procura maneiras mais claras, respeitosas e organizadas de orientar, conversar e estabelecer uma
+        comunicação mais eficiente com seus filhos.</p>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="pq-card card-azul">
+      <div class="pq-card-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A5 5 0 0 0 8 8c0 1.3.5 2.6 1.5 3.5.8.8 1.3 1.5 1.5 2.5">
+          </path>
+          <line x1="9" y1="18" x2="15" y2="18"></line>
+          <line x1="10" y1="22" x2="14" y2="22"></line>
+        </svg>
+      </div>
+      <h3>Pais que desejam ampliar seu repertório de estratégias</h3>
+      <p>Para quem quer aprender diferentes técnicas de comunicação para aplicar em casa de forma simples, prática e
+        acessível.</p>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="pq-card card-amarelo">
+      <div class="pq-card-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+      </div>
+      <h3>Pais que valorizam materiais práticos</h3>
+      <p>Para quem prefere consultar rapidamente técnicas ilustradas e organizadas sempre que precisar de novas ideias
+        para aplicar na rotina familiar.</p>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="pq-card card-verde">
+      <div class="pq-card-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path
+            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+        </svg>
+      </div>
+      <h3>Famílias que querem fortalecer a convivência</h3>
+      <p>Para pais e responsáveis que desejam tornar os momentos de conversa, orientação e rotina mais leves,
+        estruturados e positivos.</p>
+    </div>
+  </section>
+
+  <!-- ==================================================
+       4. SEÇÃO: O QUE VOCÊ VAI RECEBER
+       ================================================== -->
+  <section class="receber-section">
+    <h2 class="section-title">O que você <span class="destaque-titulo" style="--title-color: #E85D75; --underline-grad: linear-gradient(90deg, rgba(232, 93, 117, 0.1) 0%, rgba(232, 93, 117, 1) 100%);">vai receber</span></h2>
+    <p class="section-subtitle">Um conjunto completo de técnicas organizadas, ilustradas e prontas para consulta rápida
+      no dia a dia.</p>
+
+    <ul class="receber-list">
+      <!-- Card 1 -->
+      <li class="receber-item" style="--receber-color:#E85D75;">
+        <div class="receber-item-icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+          </svg>
+        </div>
+        <div class="receber-item-text">
+          <span>Técnicas práticas para diferentes situações</span>
+          <small>Aplicáveis diretamente na rotina familiar</small>
+        </div>
+      </li>
+      <!-- Card 2 -->
+      <li class="receber-item" style="--receber-color:#F5A623;">
+        <div class="receber-item-icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+          </svg>
+        </div>
+        <div class="receber-item-text">
+          <span>Estratégias organizadas por temas</span>
+          <small>Fácil de encontrar o que você precisa</small>
+        </div>
+      </li>
+      <!-- Card 3 -->
+      <li class="receber-item" style="--receber-color:#2D9CDB;">
+        <div class="receber-item-icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path>
+            <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"></path>
+          </svg>
+        </div>
+        <div class="receber-item-text">
+          <span>Conteúdo ilustrado para consulta rápida</span>
+          <small>Visual, claro e direto ao ponto</small>
+        </div>
+      </li>
+      <!-- Card 4 -->
+      <li class="receber-item" style="--receber-color:#27AE60;">
+        <div class="receber-item-icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </div>
+        <div class="receber-item-text">
+          <span>Material pensado para pais e responsáveis</span>
+          <small>Linguagem acessível, sem termos técnicos</small>
+        </div>
+      </li>
+      <!-- Card 5 -->
+      <li class="receber-item" style="--receber-color:#9B51E0;">
+        <div class="receber-item-icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+          </svg>
+        </div>
+        <div class="receber-item-text">
+          <span>Acesso digital simples e direto</span>
+          <small>Disponível no celular, tablet ou computador</small>
+        </div>
+      </li>
+    </ul>
+
+    <!-- DOIS CARROSSÉIS DE PÁGINAS DO BOOKLET -->
+    <div class="marquee-container-wrapper">
+
+      <!-- CARROSSEL 1 (Esquerda para Direita) -->
+      <div class="marquee-container">
+        <div class="marquee-track marquee-left">
+
+          <img class="page-card-img" src="assets/01_produto_principal/produto-principal_pagina_01.jpg" alt="Página">
+          <img class="page-card-img" src="assets/02_bonus_1_kit_atividades_crise/bonus-1_pagina_01.jpg" alt="Página">
+          <img class="page-card-img" src="assets/03_bonus_2_caderno_combinados/bonus-2_pagina_01.jpg" alt="Página">
+          <img class="page-card-img" src="assets/04_bonus_3_cartoes_expressao_emocional/bonus-3_pagina_01.jpg"
+            alt="Página">
+          <img class="page-card-img" src="assets/05_bonus_4_manual_interacao/bonus-4_pagina_01.jpg" alt="Página">
+          <img class="page-card-img" src="assets/01_produto_principal/produto-principal_pagina_02.jpg" alt="Página">
+          <img class="page-card-img" src="assets/02_bonus_1_kit_atividades_crise/bonus-1_pagina_02.jpg" alt="Página">
+          <img class="page-card-img" src="assets/03_bonus_2_caderno_combinados/bonus-2_pagina_02.jpg" alt="Página">
+          <img class="page-card-img" src="assets/04_bonus_3_cartoes_expressao_emocional/bonus-3_pagina_02.jpg"
+            alt="Página">
+          <img class="page-card-img" src="assets/05_bonus_4_manual_interacao/bonus-4_pagina_02.jpg" alt="Página">
+
+          <!-- Duplicado para loop infinito -->
+          <img class="page-card-img" src="assets/01_produto_principal/produto-principal_pagina_01.jpg" alt="Página">
+          <img class="page-card-img" src="assets/02_bonus_1_kit_atividades_crise/bonus-1_pagina_01.jpg" alt="Página">
+          <img class="page-card-img" src="assets/03_bonus_2_caderno_combinados/bonus-2_pagina_01.jpg" alt="Página">
+          <img class="page-card-img" src="assets/04_bonus_3_cartoes_expressao_emocional/bonus-3_pagina_01.jpg"
+            alt="Página">
+          <img class="page-card-img" src="assets/05_bonus_4_manual_interacao/bonus-4_pagina_01.jpg" alt="Página">
+          <img class="page-card-img" src="assets/01_produto_principal/produto-principal_pagina_02.jpg" alt="Página">
+          <img class="page-card-img" src="assets/02_bonus_1_kit_atividades_crise/bonus-1_pagina_02.jpg" alt="Página">
+          <img class="page-card-img" src="assets/03_bonus_2_caderno_combinados/bonus-2_pagina_02.jpg" alt="Página">
+          <img class="page-card-img" src="assets/04_bonus_3_cartoes_expressao_emocional/bonus-3_pagina_02.jpg"
+            alt="Página">
+          <img class="page-card-img" src="assets/05_bonus_4_manual_interacao/bonus-4_pagina_02.jpg" alt="Página">
+
+        </div>
+      </div>
+
+      <!-- CARROSSEL 2 (Direita para Esquerda) -->
+      <div class="marquee-container">
+        <div class="marquee-track marquee-right">
+
+          <img class="page-card-img" src="assets/01_produto_principal/produto-principal_pagina_03.jpg" alt="Página">
+          <img class="page-card-img" src="assets/02_bonus_1_kit_atividades_crise/bonus-1_pagina_03.jpg" alt="Página">
+          <img class="page-card-img" src="assets/03_bonus_2_caderno_combinados/bonus-2_pagina_03.jpg" alt="Página">
+          <img class="page-card-img" src="assets/04_bonus_3_cartoes_expressao_emocional/bonus-3_pagina_03.jpg"
+            alt="Página">
+          <img class="page-card-img" src="assets/05_bonus_4_manual_interacao/bonus-4_pagina_03.jpg" alt="Página">
+          <img class="page-card-img" src="assets/01_produto_principal/produto-principal_pagina_04.jpg" alt="Página">
+          <img class="page-card-img" src="assets/02_bonus_1_kit_atividades_crise/bonus-1_pagina_04.jpg" alt="Página">
+          <img class="page-card-img" src="assets/03_bonus_2_caderno_combinados/bonus-2_pagina_04.jpg" alt="Página">
+          <img class="page-card-img" src="assets/04_bonus_3_cartoes_expressao_emocional/bonus-3_pagina_04.jpg"
+            alt="Página">
+          <img class="page-card-img" src="assets/05_bonus_4_manual_interacao/bonus-4_pagina_04.jpg" alt="Página">
+
+          <!-- Duplicado para loop infinito -->
+          <img class="page-card-img" src="assets/01_produto_principal/produto-principal_pagina_03.jpg" alt="Página">
+          <img class="page-card-img" src="assets/02_bonus_1_kit_atividades_crise/bonus-1_pagina_03.jpg" alt="Página">
+          <img class="page-card-img" src="assets/03_bonus_2_caderno_combinados/bonus-2_pagina_03.jpg" alt="Página">
+          <img class="page-card-img" src="assets/04_bonus_3_cartoes_expressao_emocional/bonus-3_pagina_03.jpg"
+            alt="Página">
+          <img class="page-card-img" src="assets/05_bonus_4_manual_interacao/bonus-4_pagina_03.jpg" alt="Página">
+          <img class="page-card-img" src="assets/01_produto_principal/produto-principal_pagina_04.jpg" alt="Página">
+          <img class="page-card-img" src="assets/02_bonus_1_kit_atividades_crise/bonus-1_pagina_04.jpg" alt="Página">
+          <img class="page-card-img" src="assets/03_bonus_2_caderno_combinados/bonus-2_pagina_04.jpg" alt="Página">
+          <img class="page-card-img" src="assets/04_bonus_3_cartoes_expressao_emocional/bonus-3_pagina_04.jpg"
+            alt="Página">
+          <img class="page-card-img" src="assets/05_bonus_4_manual_interacao/bonus-4_pagina_04.jpg" alt="Página">
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================================================
+       5. SEÇÃO: BÔNUS GRATUITOS
+       ================================================== -->
+  <section class="bonus-section">
+    <h2 class="section-title">Você também recebe <span class="destaque-titulo" style="--title-color: #F5A623; --underline-grad: linear-gradient(90deg, rgba(245, 166, 35, 0.1) 0%, rgba(245, 166, 35, 1) 100%);">4 bônus gratuitos</span></h2>
+    <p class="section-subtitle">Além do material principal, você terá acesso a materiais complementares criados para
+      apoiar ainda mais a rotina familiar e a aplicação das técnicas.</p>
+
+    <div class="bonus-cards-wrapper">
+
+      <!-- BÔNUS 1 -->
+      <div class="bonus-card">
+        <div class="bonus-card-header h1">
+          <span class="bonus-num-label">🎁 Bônus 1</span>
+          <span class="bonus-tag-gratis">GRÁTIS</span>
+        </div>
+        <div class="bonus-card-img">
+          <img src="assets/bonus1.png" alt="Bônus 1"
+            onerror="this.src='assets/02_bonus_1_kit_atividades_crise/bonus-1_pagina_01.jpg';">
+        </div>
+        <div class="bonus-card-body">
+          <h3>Kit de Atividades para Momentos de Crise</h3>
+          <p>Atividades práticas para apoiar pais e responsáveis em situações de crise, ajudando a organizar a
+            comunicação, reduzir conflitos e conduzir a criança ou jovem com mais calma.</p>
+        </div>
+      </div>
+
+      <!-- BÔNUS 2 -->
+      <div class="bonus-card">
+        <div class="bonus-card-header h2">
+          <span class="bonus-num-label">🎁 Bônus 2</span>
+          <span class="bonus-tag-gratis">GRÁTIS</span>
+        </div>
+        <div class="bonus-card-img">
+          <img src="assets/bonus2.png" alt="Bônus 2"
+            onerror="this.src='assets/03_bonus_2_caderno_combinados/bonus-2_pagina_01.jpg';">
+        </div>
+        <div class="bonus-card-body">
+          <h3>Caderno de Combinados da Escola e de Casa</h3>
+          <p>Um material visual com combinados, rotinas e orientações simples para facilitar a organização do dia a dia
+            em casa e na escola.</p>
+        </div>
+      </div>
+
+      <!-- BÔNUS 3 -->
+      <div class="bonus-card">
+        <div class="bonus-card-header h3">
+          <span class="bonus-num-label">🎁 Bônus 3</span>
+          <span class="bonus-tag-gratis">GRÁTIS</span>
+        </div>
+        <div class="bonus-card-img">
+          <img src="assets/bonus3.png" alt="Bônus 3"
+            onerror="this.src='assets/04_bonus_3_cartoes_expressao_emocional/bonus-3_pagina_01.jpg';">
+        </div>
+        <div class="bonus-card-body">
+          <h3>Cartões de Expressão Emocional</h3>
+          <p>Cartões ilustrados para ajudar crianças e jovens a reconhecer, nomear e comunicar sentimentos de forma mais
+            clara e segura.</p>
+        </div>
+      </div>
+
+      <!-- BÔNUS 4 -->
+      <div class="bonus-card">
+        <div class="bonus-card-header h4">
+          <span class="bonus-num-label">🎁 Bônus 4</span>
+          <span class="bonus-tag-gratis">GRÁTIS</span>
+        </div>
+        <div class="bonus-card-img">
+          <img src="assets/bonus4.png" alt="Bônus 4"
+            onerror="this.src='assets/05_bonus_4_manual_interacao/bonus-4_pagina_01.jpg';">
+        </div>
+        <div class="bonus-card-body">
+          <h3>Manual de Interação com Outras Crianças</h3>
+          <p>Atividades e estratégias para fortalecer a convivência, a cooperação, o compartilhamento e a comunicação
+            durante brincadeiras, escola, família e interações sociais.</p>
+        </div>
+      </div>
+
+      <!-- Área de Soma de Valores - Estilo Recibo -->
+      <div class="soma-valores-container">
+        <span class="soma-valores-tag">🎁 Resumo dos Bônus</span>
+        <p class="soma-valores-titulo">Somando tudo o que você vai levar:</p>
+
+        <div class="soma-valores-linha">
+          <span class="soma-valores-linha-nome">Bônus 1: Kit de Atividades para Crise</span>
+          <span class="soma-valores-linha-preco">R$ 47,00</span>
+        </div>
+        <div class="soma-valores-linha">
+          <span class="soma-valores-linha-nome">Bônus 2: Caderno de Combinados</span>
+          <span class="soma-valores-linha-preco">R$ 37,00</span>
+        </div>
+        <div class="soma-valores-linha">
+          <span class="soma-valores-linha-nome">Bônus 3: Cartões de Expressão</span>
+          <span class="soma-valores-linha-preco">R$ 27,00</span>
+        </div>
+        <div class="soma-valores-linha" style="border-bottom: none;">
+          <span class="soma-valores-linha-nome">Bônus 4: Manual de Interação</span>
+          <span class="soma-valores-linha-preco">R$ 27,00</span>
+        </div>
+
+        <div class="soma-valores-total-row">
+          <span class="soma-valores-total-label">Valor Total Soma:</span>
+          <span class="soma-valores-total-box">R$ 138,00</span>
+        </div>
+
+        <hr class="soma-valores-divider">
+
+        <p class="soma-valores-hoje-label">Mas hoje tudo sairá por:</p>
+        <p class="soma-valores-hoje-preco">R$ 0,00 (GRÁTIS)</p>
+      </div>
+
+    </div><!-- /.bonus-cards-wrapper -->
+  </section>
+
+  <!-- ==================================================
+       NOVA SEÇÃO: CRONÔMETRO DE OFERTA
+       ================================================== -->
+  <section class="secao-cronometro">
+    <span class="cronometro-tag">Escolha o seu plano</span>
+    <h2 class="cronometro-title">Escolha o Melhor Plano <span class="destaque"><span>Para Você!</span></span></h2>
+
+    <div class="cronometro-urgencia">
+      <span>⏳</span> Oferta Limitada — Termina Em:
+    </div>
+
+    <div class="timer-boxes-container">
+      <!-- Horas -->
+      <div class="timer-box">
+        <span class="timer-box-num" id="timer-box-hours">03</span>
+        <span class="timer-box-label">Horas</span>
+      </div>
+
+      <div class="timer-separator">:</div>
+
+      <!-- Minutos -->
+      <div class="timer-box">
+        <span class="timer-box-num" id="timer-box-minutes">47</span>
+        <span class="timer-box-label">Minutos</span>
+      </div>
+
+      <div class="timer-separator">:</div>
+
+      <!-- Segundos -->
+      <div class="timer-box">
+        <span class="timer-box-num" id="timer-box-seconds">28</span>
+        <span class="timer-box-label">Segundos</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================================================
+       6. SEÇÃO DE PLANOS
+       ================================================== -->
+  <section class="planos-section" id="planos">
+    <h2 class="section-title">Escolha a <span class="destaque-titulo" style="--title-color: #9B51E0; --underline-grad: linear-gradient(90deg, rgba(155, 81, 224, 0.1) 0%, rgba(155, 81, 224, 1) 100%);">melhor opção</span> para você</h2>
+    <p class="section-subtitle">Você pode começar apenas com o material principal ou escolher a opção completa com todos
+      os bônus inclusos.</p>
+
+    <div class="planos-container">
+
+      <!-- PLANO BÁSICO -->
+      <div class="plano-card plano-basico-card">
+        <h3 class="plano-title">Plano Básico</h3>
+        <p class="plano-desc">Para quem deseja acessar apenas o material principal.</p>
+
+        <div class="plano-preco-box" style="margin-top: 10px;">
+          <span>Acesso Imediato por</span>
+          <div class="plano-preco-valor">R$ 10,00 <span
+              style="font-size: 11.5px; font-weight: 500; color: var(--grafite); opacity: 0.85;">/ Pagamento
+              único</span></div>
+        </div>
+
+        <div class="plano-divider"></div>
+
+        <ul class="planos-features">
+          <li class="plano-feature-item inclui">
+            <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>+150 Técnicas de Comunicação para Crianças e Jovens com TOD</span>
+          </li>
+          <li class="plano-feature-item inclui">
+            <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Acesso Vitalício</span>
+          </li>
+          <li class="plano-feature-item inclui">
+            <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Pagamento único</span>
+          </li>
+          <li class="plano-feature-item nao-inclui">
+            <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+            <span>Sem Bônus 1: Kit de Atividades para Momentos de Crise</span>
+          </li>
+          <li class="plano-feature-item nao-inclui">
+            <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+            <span>Sem Bônus 2: Caderno de Combinados da Escola e de Casa</span>
+          </li>
+          <li class="plano-feature-item nao-inclui">
+            <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+            <span>Sem Bônus 3: Cartões de Expressão Emocional</span>
+          </li>
+          <li class="plano-feature-item nao-inclui">
+            <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+            <span>Sem Bônus 4: Manual de Interação com Outras Crianças</span>
+          </li>
+        </ul>
+
+        <button class="btn-cta" id="btn-comprar-basico" style="margin-top: 15px; margin-bottom: 0;">QUERO O PLANO
+          BÁSICO</button>
+        <p class="plano-seguro-label">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          Pagamento 100% seguro
+        </p>
+      </div>
+
+      <!-- PLANO COMPLETO -->
+      <div class="plano-card plano-completo-card">
+        <span class="plano-selo-mais-escolhido">MAIS ESCOLHIDO</span>
+        <h3 class="plano-title">Plano Completo</h3>
+        <p class="plano-desc">Para quem deseja acessar o material principal e todos os bônus complementares.</p>
+
+        <div class="plano-preco-box" style="margin-top: 10px;">
+          <span>Acesso Imediato por</span>
+          <div class="plano-preco-valor" style="color: var(--roxo-escuro);">R$ 27,90 <span
+              style="font-size: 11.5px; font-weight: 500; color: var(--grafite); opacity: 0.85;">/ Pagamento
+              único</span></div>
+        </div>
+
+        <!-- Mockup do Produto no Plano Completo -->
+        <img src="assets/mockup-principal.png" alt="Mockup TOD Completo"
+          style="max-width: 100%; width: 100%; height: auto; display: block; margin: 12px auto -4px auto;"
+          onerror="this.src='assets/01_produto_principal/produto-principal_pagina_01.jpg';">
+
+        <ul class="planos-features" style="margin-bottom: 0; margin-top: 8px;">
+          <li class="plano-feature-item inclui">
+            <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>+150 Técnicas de Comunicação para Crianças e Jovens com TOD</span>
+          </li>
+          <li class="plano-feature-item inclui">
+            <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Acesso Vitalício</span>
+          </li>
+          <li class="plano-feature-item inclui">
+            <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Pagamento único</span>
+          </li>
+        </ul>
+
+        <div class="plano-bonus-box">
+          <div class="plano-bonus-header">🎁 BÔNUS EXCLUSIVOS (VALOR: R$ 197,00 POR R$ 0,00):</div>
+          <div class="plano-bonus-item">
+            <div class="plano-bonus-icon">🎁</div>
+            <div class="plano-bonus-name">Bônus 1: Kit de Atividades para Momentos de Crise</div>
+          </div>
+          <div class="plano-bonus-item">
+            <div class="plano-bonus-icon">📚</div>
+            <div class="plano-bonus-name">Bônus 2: Caderno de Combinados da Escola e de Casa</div>
+          </div>
+          <div class="plano-bonus-item">
+            <div class="plano-bonus-icon">🃏</div>
+            <div class="plano-bonus-name">Bônus 3: Cartões de Expressão Emocional</div>
+          </div>
+          <div class="plano-bonus-item">
+            <div class="plano-bonus-icon">🗣️</div>
+            <div class="plano-bonus-name">Bônus 4: Manual de Interação com Outras Crianças</div>
+          </div>
+        </div>
+
+        <button class="btn-cta" id="btn-comprar-completo" style="margin-top: 20px; margin-bottom: 0;">QUERO O PLANO
+          COMPLETO</button>
+        <p class="plano-seguro-label">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          Pagamento 100% seguro
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================================================
+       POP-UP DE UPGRADE DO PLANO BÁSICO (MODAL)
+       ================================================== -->
+  <div class="modal-overlay" id="modal-upgrade">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="btn-close-modal" aria-label="Fechar modal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <span class="modal-header-tag">Super Oportunidade</span>
+      <h3 class="modal-title">Antes de finalizar…</h3>
+      <p class="modal-text">Você pode levar o material principal + todos os 4 bônus por apenas <strong>R$ 17,90</strong>
+        nesta oferta especial.</p>
+
+      <div class="modal-box-items">
+        <p>Itens inclusos:</p>
+        <ul class="modal-list">
+          <li class="modal-list-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Material Principal (150 Técnicas)</span>
+          </li>
+          <li class="modal-list-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Kit Atividades para Situações de Crise</span>
+          </li>
+          <li class="modal-list-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Caderno de Combinados Escola e Casa</span>
+          </li>
+          <li class="modal-list-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Cartões de Expressão Emocional</span>
+          </li>
+          <li class="modal-list-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Manual de Interação com Outras Crianças</span>
+          </li>
+        </ul>
+      </div>
+
+      <span class="modal-price-label">Tudo isso hoje por apenas</span>
+      <div class="modal-price-value">R$ 17,90</div>
+
+      <button class="btn-cta btn-upgrade-sim" id="btn-upgrade-aceito">SIM, QUERO O PREMIUM COM DESCONTO</button>
+      <button class="btn-upgrade-nao" id="btn-upgrade-recusado">Não, quero continuar com o plano básico</button>
+    </div>
+  </div>
+
+  <!-- ==================================================
+       7. SEÇÃO DE GARANTIA
+       ================================================== -->
+  <section class="garantia-section">
+    <!-- Imagem de selo de garantia -->
+    <img src="assets/garantia.png" alt="Garantia de 30 dias"
+      style="max-width: 220px; width: 100%; display: block; margin: 0 auto 16px auto;">
+
+    <div class="garantia-box">
+      <span class="garantia-tag">Garantia Incondicional</span>
+      <h3>Sua Satisfação é Prioridade</h3>
+      <p>Se em até 30 dias você não amar a experiência com o material, <span class="sublinhado-amarelo">devolvemos 100%
+          do seu</span> <span class="sublinhado-amarelo">dinheiro.</span> Sem perguntas, sem burocracia.</p>
+    </div>
+  </section>
+
+  <!-- ==================================================
+       8. FAQ (PERGUNTAS FREQUENTES)
+       ================================================== -->
+  <section class="faq-section">
+    <h2 class="section-title"><span class="destaque-titulo" style="--title-color: #27AE60; --underline-grad: linear-gradient(90deg, rgba(39, 174, 96, 0.1) 0%, rgba(39, 174, 96, 1) 100%);">Perguntas frequentes</span></h2>
+    <p class="section-subtitle">Tire suas dúvidas rápidas sobre o material e a forma de acesso.</p>
+
+    <div class="faq-container">
+
+      <!-- FAQ 1 -->
+      <div class="faq-item">
+        <button class="faq-trigger">
+          <h4>Como vou receber o material?</h4>
+          <svg class="faq-icon-svg" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-content">
+          <p>O acesso ao material é digital e será enviado conforme as instruções da plataforma de compra após a
+            confirmação do pagamento.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="faq-item">
+        <button class="faq-trigger">
+          <h4>Esse material é indicado para quem?</h4>
+          <svg class="faq-icon-svg" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-content">
+          <p>Ele foi pensado para pais, mães e responsáveis que desejam ampliar o repertório de comunicação e tornar a
+            convivência familiar mais organizada, clara e respeitosa.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="faq-item">
+        <button class="faq-trigger">
+          <h4>Preciso ter experiência para usar?</h4>
+          <svg class="faq-icon-svg" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-content">
+          <p>Não. O material foi organizado de forma prática, com técnicas simples e ilustradas para facilitar a
+            consulta e aplicação no dia a dia.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="faq-item">
+        <button class="faq-trigger">
+          <h4>O Plano Básico tem os bônus?</h4>
+          <svg class="faq-icon-svg" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-content">
+          <p>Não. O Plano Básico inclui apenas o material principal. Os bônus estão disponíveis no Plano Completo ou na
+            oferta especial apresentada no pop-up.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="faq-item">
+        <button class="faq-trigger">
+          <h4>Tem garantia?</h4>
+          <svg class="faq-icon-svg" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-content">
+          <p>Sim. Você conta com 30 dias de garantia incondicional para avaliar o material com tranquilidade.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================================================
+       9. FOOTER
+       ================================================== -->
+  <footer class="footer">
+    <div class="footer-copy">© 2026 - Todos os direitos reservados.</div>
+
+    <div class="footer-links">
+      <a href="#planos" onclick="alert('Link fictício: Termos de Uso'); return false;">Termos de Uso</a>
+      <a href="#planos" onclick="alert('Link fictício: Política de Privacidade'); return false;">Política de
+        Privacidade</a>
+      <a href="#planos" onclick="alert('Link fictício: Suporte'); return false;">Suporte</a>
+    </div>
+
+    <p class="footer-disclaimer">Este material possui finalidade educativa e informativa, não substituindo
+      acompanhamento profissional quando necessário.</p>
+  </footer>
+
+  <!-- ==================================================
+       SCRIPTS JAVASCRIPT E LOGICA DA PÁGINA
+       ================================================== -->
+  <script>
+    /* ==================================================
+       CONFIGURAÇÃO DE LINKS DE CHECKOUT
+       ================================================== */
+    const LINK_CHECKOUT_BASICO = "https://pay.exemplo.com/checkout-basico";
+    const LINK_CHECKOUT_PREMIUM_DESCONTO = "https://pay.exemplo.com/checkout-premium-desconto";
+    const LINK_CHECKOUT_COMPLETO = "https://pay.exemplo.com/checkout-completo";
+
+    /* ==================================================
+       CRONÔMETRO REGRESSIVO
+       ================================================== */
+    const timerElement = document.getElementById('timer');
+    const boxHoursElement = document.getElementById('timer-box-hours');
+    const boxMinutesElement = document.getElementById('timer-box-minutes');
+    const boxSecondsElement = document.getElementById('timer-box-seconds');
+    const COUNTDOWN_KEY = 'sales_page_timer_end';
+
+    function initTimer() {
+      let endTime = localStorage.getItem(COUNTDOWN_KEY);
+
+      if (!endTime) {
+        const durationMs = (3 * 3600 + 47 * 60 + 28) * 1000;
+        endTime = Date.now() + durationMs;
+        localStorage.setItem(COUNTDOWN_KEY, endTime);
+      } else {
+        endTime = parseInt(endTime, 10);
+      }
+
+      function updateCounter() {
+        const now = Date.now();
+        let diff = endTime - now;
+
+        if (diff <= 0) {
+          const durationMs = 4 * 3600 * 1000;
+          endTime = Date.now() + durationMs;
+          localStorage.setItem(COUNTDOWN_KEY, endTime);
+          diff = durationMs;
+        }
+
+        const hours = Math.floor(diff / (3600 * 1000));
+        const minutes = Math.floor((diff % (3600 * 1000)) / (60 * 1000));
+        const seconds = Math.floor((diff % (60 * 1000)) / 1000);
+
+        const hoursStr = String(hours).padStart(2, '0');
+        const minutesStr = String(minutes).padStart(2, '0');
+        const secondsStr = String(seconds).padStart(2, '0');
+
+        if (timerElement) {
+          timerElement.textContent = hoursStr + ':' + minutesStr + ':' + secondsStr;
+        }
+
+        if (boxHoursElement && boxMinutesElement && boxSecondsElement) {
+          boxHoursElement.textContent = hoursStr;
+          boxMinutesElement.textContent = minutesStr;
+          boxSecondsElement.textContent = secondsStr;
+        }
+      }
+
+      updateCounter();
+      setInterval(updateCounter, 1000);
+    }
+
+    initTimer();
+
+    /* ==================================================
+       CONTROLE DO MODAL DE UPGRADE DO PLANO BÁSICO
+       ================================================== */
+    const modal = document.getElementById('modal-upgrade');
+    const btnComprarBasico = document.getElementById('btn-comprar-basico');
+    const btnCloseModal = document.getElementById('btn-close-modal');
+    const btnUpgradeAceito = document.getElementById('btn-upgrade-aceito');
+    const btnUpgradeRecusado = document.getElementById('btn-upgrade-recusado');
+
+    btnComprarBasico.addEventListener('click', (e) => {
+      e.preventDefault();
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    });
+
+    function closeModal() {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    btnCloseModal.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    btnUpgradeAceito.addEventListener('click', () => {
+      window.location.href = LINK_CHECKOUT_PREMIUM_DESCONTO;
+    });
+
+    btnUpgradeRecusado.addEventListener('click', () => {
+      window.location.href = LINK_CHECKOUT_BASICO;
+    });
+
+    /* ==================================================
+       BOTÃO PLANO COMPLETO (CHECKOUT DIRETO)
+       ================================================== */
+    const btnComprarCompleto = document.getElementById('btn-comprar-completo');
+    btnComprarCompleto.addEventListener('click', () => {
+      window.location.href = LINK_CHECKOUT_COMPLETO;
+    });
+
+    /* ==================================================
+       FAQ ACORDEÃO INTERATIVO
+       ================================================== */
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const trigger = item.querySelector('.faq-trigger');
+      trigger.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        faqItems.forEach(i => i.classList.remove('active'));
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+
+    /* ==================================================
+       ROLAGEM SUAVE DOS LINKS ÂNCORA
+       ================================================== */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          const topOffset = targetElement.getBoundingClientRect().top + window.pageYOffset - 50;
+          window.scrollTo({
+            top: topOffset,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
