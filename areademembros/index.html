@@ -470,23 +470,30 @@
 
     /* CHECKBOX REDONDO / BOTOES DE CHECK ESTILO CERTIFICADO */
     .btn-check-circle {
-      width: 38px;
-      height: 38px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
-      border: 2px solid #E2E2EC;
+      border: 2.5px solid #A09EBE; /* Mais visível e forte */
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       background-color: var(--branco);
-      transition: all 0.2s;
+      transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    }
+
+    .btn-check-circle:hover {
+      background-color: #F0F7FF;
+      border-color: var(--azul-principal);
+      transform: scale(1.08);
     }
 
     .btn-check-circle svg {
       width: 18px;
       height: 18px;
-      stroke: #8A87A8;
-      stroke-width: 3;
+      stroke: #555273; /* Ícone visível e escuro por padrão */
+      stroke-width: 3.5px;
       fill: none;
       transition: all 0.2s;
     }
@@ -494,7 +501,13 @@
     .btn-check-circle.checked {
       background-color: var(--verde-texto);
       border-color: var(--verde-texto);
-      box-shadow: 0 4px 12px rgba(39, 174, 96, 0.25);
+      box-shadow: 0 6px 16px rgba(39, 174, 96, 0.35);
+      transform: scale(1.1);
+    }
+
+    .btn-check-circle.checked:hover {
+      background-color: #219653;
+      border-color: #219653;
     }
 
     .btn-check-circle.checked svg {
