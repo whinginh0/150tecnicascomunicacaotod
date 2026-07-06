@@ -230,28 +230,29 @@
     }
 
     .sidebar-card-user {
-      background-color: #FAF9FE;
-      border: 1px solid #E2E2EC;
+      background-color: #F0F7FF; /* Fundo azul bebê visível */
+      border: 1.5px solid #C4DDFC;
       border-radius: 12px;
       padding: 16px;
       margin-bottom: 30px;
       text-align: left;
+      box-shadow: 0 4px 12px rgba(73, 160, 232, 0.05);
     }
 
     .sidebar-card-user span {
       font-size: 9.5px;
       font-weight: 800;
-      color: var(--azul-escuro);
-      background-color: var(--azul-claro);
-      padding: 2px 8px;
+      color: var(--branco);
+      background-color: var(--azul-escuro); /* Maior destaque na tag */
+      padding: 3px 10px;
       border-radius: 50px;
       display: inline-block;
       margin-bottom: 8px;
     }
 
     .sidebar-card-user p {
-      font-size: 12px;
-      font-weight: 700;
+      font-size: 12.5px;
+      font-weight: 800;
       color: var(--preto);
       word-break: break-all;
     }
@@ -266,7 +267,7 @@
       justify-content: space-between;
       align-items: center;
       font-size: 11px;
-      font-weight: 800;
+      font-weight: 900;
       color: var(--preto);
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -275,8 +276,9 @@
 
     .sidebar-progress-bar-bg {
       width: 100%;
-      height: 6px;
-      background-color: #EBEBF3;
+      height: 10px; /* Mais espessa para melhor visualização */
+      background-color: #FAF9FE;
+      border: 1px solid #D5D5E6;
       border-radius: 10px;
       overflow: hidden;
       margin-bottom: 8px;
@@ -284,7 +286,7 @@
 
     .sidebar-progress-bar-fill {
       height: 100%;
-      background-color: var(--azul-principal);
+      background-color: var(--azul-escuro); /* Azul escuro de destaque */
       width: 0%;
       border-radius: 10px;
       transition: width 0.3s ease;
@@ -292,8 +294,8 @@
 
     .sidebar-progress-subtext {
       font-size: 11px;
-      color: #4D4D6B;
-      font-weight: 700;
+      color: var(--preto); /* Mudado para preto para destacar */
+      font-weight: 800;
     }
 
     .btn-sidebar-logout {
@@ -351,39 +353,50 @@
     /* CARD DE ENTREGÁVEL */
     .grid-card {
       background-color: var(--branco);
-      border: 1px solid #E2E2EC;
+      border: 1.5px solid #D5D5E6;
       border-radius: var(--radius-lg);
-      box-shadow: var(--sombra-premium);
+      box-shadow: 0 10px 28px rgba(30, 20, 50, 0.15), 0 3px 6px rgba(30, 20, 50, 0.08);
       display: flex;
       flex-direction: column;
       overflow: hidden;
-      transition: all 0.25s ease;
+      transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       position: relative;
     }
 
+    .grid-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background-color: var(--card-color, var(--azul-principal));
+      z-index: 10;
+    }
+
     .grid-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--sombra-hover);
+      transform: translateY(-6px);
+      border-color: var(--card-color, var(--azul-principal));
+      box-shadow: 0 18px 42px rgba(30, 20, 50, 0.22), 0 5px 12px rgba(30, 20, 50, 0.18);
     }
 
     .grid-card-banner {
       width: 100%;
-      height: 260px; /* Aumentado para acomodar a proporção vertical das capas */
+      height: 260px;
       position: relative;
-      background-color: #FAF9FE; /* Fundo neutro limpo */
-      padding: 16px;
+      background-color: var(--card-bg, #FAF9FE); /* Fundo colorido sutil baseado no tema */
+      padding: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-bottom: 1px solid #E2E2EC;
+      border-bottom: 1.5px solid #E2E2EC;
+      transition: background-color 0.25s;
     }
 
     .grid-card-banner-img {
       max-width: 100%;
       max-height: 100%;
-      object-fit: contain; /* Exibe a imagem inteira sem cortes */
+      object-fit: contain;
       border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
     }
 
     .grid-card-tag {
@@ -610,7 +623,7 @@
         description: "Nosso guia visual principal completo com mais de 150 técnicas ilustradas passo a passo, organizadas de forma objetiva para aplicação imediata.",
         tag: "Principal",
         theme: "#49A0E8", // Nosso azul bebê
-        cover: "https://i.ibb.co/XZfVz2zB/produto-principal-pagina-01.jpg",
+        cover: "https://i.ibb.co/Z6THGBhv/image.png",
         fileUrl: "entregavel - 150 tecnicas/150_tecnicas_comunicacao_TOD_COMPLETO_A4_MARGEM_AJUSTADA.pdf"
       },
       {
@@ -759,6 +772,7 @@
         const card = document.createElement('div');
         card.className = 'grid-card';
         card.style.setProperty('--card-color', material.theme);
+        card.style.setProperty('--card-bg', material.theme + '15'); // 15 = ~8% opacidade para fundo pastel suave
         
         card.innerHTML = `
           <div class="grid-card-banner">
