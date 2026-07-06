@@ -748,7 +748,7 @@
     // Configurações Supabase
     const SUPABASE_URL = "https://djuckwoewpqomaykgwzf.supabase.co";
     const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRqdWNrd29ld3Bxb21heWtnd3pmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODMzNjE3ODAsImV4cCI6MjA5ODkzNzc4MH0.Q3DYyVjIkM09xrNHAH3nSuis3bCD1ZINnIy0w9Fzit4";
-    const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    const dbSupabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
     // Elementos DOM
     const viewLoginWrapper = document.getElementById('view-login-wrapper');
@@ -835,7 +835,7 @@
       errorAlert.style.display = 'none';
       
       try {
-        const { data, error } = await supabase
+        const { data, error } = await dbSupabase
           .from('clientes')
           .select('email, nome, plano')
           .eq('email', email)
