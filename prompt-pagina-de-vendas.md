@@ -477,7 +477,7 @@ PERGUNTA 1:
 “Como vou receber o material?”
 
 RESPOSTA:
-“O acesso ao material é digital e será enviado para o seu e-mail conforme as instruções da plataforma de compra após a confirmação do pagamento. Certifique-se de verificar também a sua caixa de spam.”
+“O acesso ao material é digital e será enviado através do e-mail de compra (verifique também a caixa de spam).”
 
 PERGUNTA 2:
 “Esse material é indicado para quem?”
