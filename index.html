@@ -16,20 +16,22 @@
 
   <!-- Meta Pixel Code -->
   <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1523557742799532');
-  fbq('track', 'PageView');
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1523557742799532');
+    fbq('track', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1523557742799532&ev=PageView&noscript=1"
-  /></noscript>
+      src="https://www.facebook.com/tr?id=1523557742799532&ev=PageView&noscript=1" /></noscript>
   <!-- End Meta Pixel Code -->
 
   <!-- Utmify Pixel Code -->
@@ -50,13 +52,17 @@
     :root {
       /* Cores mais fortes e vibrantes com pegada infantil/educativa */
       --branco: #FFFFFF;
-      --off-white: #F0F7FF; /* Azul bebê com baixa opacidade */
+      --off-white: #F0F7FF;
+      /* Azul bebê com baixa opacidade */
       --preto: #2D2D2D;
       --grafite: #4D4D4D;
 
-      --roxo-claro: #E0EFFF; /* Azul bebê claro */
-      --roxo-principal: #49A0E8; /* Azul bebê principal */
-      --roxo-escuro: #2D8CD5; /* Azul bebê escuro */
+      --roxo-claro: #E0EFFF;
+      /* Azul bebê claro */
+      --roxo-principal: #49A0E8;
+      /* Azul bebê principal */
+      --roxo-escuro: #2D8CD5;
+      /* Azul bebê escuro */
 
       --amarelo-claro: #FFF5C5;
       --amarelo-destaque: #FFD214;
@@ -95,7 +101,8 @@
     html {
       scroll-behavior: smooth;
       font-family: 'Outfit', sans-serif;
-      background-color: #E8F3FF; /* Fundo lúdico externo no desktop (azul bebê suave) */
+      background-color: #E8F3FF;
+      /* Fundo lúdico externo no desktop (azul bebê suave) */
       color: var(--grafite);
       line-height: 1.45;
     }
@@ -514,7 +521,9 @@
     .receber-item::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       height: 3.5px;
       border-radius: 18px 18px 0 0;
       background: var(--receber-color, var(--roxo-claro));
@@ -562,7 +571,8 @@
     .receber-item small {
       font-size: 11.5px;
       font-weight: 600;
-      color: #555273; /* Cor mais escura para aumentar o contraste e legibilidade */
+      color: #555273;
+      /* Cor mais escura para aumentar o contraste e legibilidade */
     }
 
     /* Carrosséis Marquee Verticais (Estilo Páginas Internas) */
@@ -1776,7 +1786,9 @@
        3. SEÇÃO: PARA QUEM É ESTE MATERIAL?
        ================================================== -->
   <section class="para-quem-section" style="padding-top: 20px;">
-    <h2 class="section-title">Para quem é <span class="destaque-titulo" style="--title-color: #2D9CDB; --underline-grad: linear-gradient(90deg, rgba(45, 156, 219, 0.1) 0%, rgba(45, 156, 219, 1) 100%);">este material?</span></h2>
+    <h2 class="section-title">Para quem é <span class="destaque-titulo"
+        style="--title-color: #2D9CDB; --underline-grad: linear-gradient(90deg, rgba(45, 156, 219, 0.1) 0%, rgba(45, 156, 219, 1) 100%);">este
+        material?</span></h2>
     <p class="section-subtitle">Este material foi desenvolvido para pais e mães que desejam melhorar a comunicação com
       seus filhos, fortalecer a convivência familiar e contar com técnicas práticas para diferentes situações do dia a
       dia.</p>
@@ -1848,7 +1860,9 @@
        4. SEÇÃO: O QUE VOCÊ VAI RECEBER
        ================================================== -->
   <section class="receber-section">
-    <h2 class="section-title">O que você <span class="destaque-titulo" style="--title-color: #E85D75; --underline-grad: linear-gradient(90deg, rgba(232, 93, 117, 0.1) 0%, rgba(232, 93, 117, 1) 100%);">vai receber</span></h2>
+    <h2 class="section-title">O que você <span class="destaque-titulo"
+        style="--title-color: #E85D75; --underline-grad: linear-gradient(90deg, rgba(232, 93, 117, 0.1) 0%, rgba(232, 93, 117, 1) 100%);">vai
+        receber</span></h2>
     <p class="section-subtitle">Um conjunto completo de técnicas organizadas, ilustradas e prontas para consulta rápida
       no dia a dia.</p>
 
@@ -1856,8 +1870,11 @@
       <!-- Card 1 -->
       <li class="receber-item" style="--receber-color:#E85D75;">
         <div class="receber-item-icon-wrap">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+            </path>
           </svg>
         </div>
         <div class="receber-item-text">
@@ -1868,7 +1885,8 @@
       <!-- Card 2 -->
       <li class="receber-item" style="--receber-color:#F5A623;">
         <div class="receber-item-icon-wrap">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
             <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
           </svg>
         </div>
@@ -1880,9 +1898,14 @@
       <!-- Card 3 -->
       <li class="receber-item" style="--receber-color:#2D9CDB;">
         <div class="receber-item-icon-wrap">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path>
-            <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"></path>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z">
+            </path>
+            <path
+              d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z">
+            </path>
           </svg>
         </div>
         <div class="receber-item-text">
@@ -1893,7 +1916,8 @@
       <!-- Card 4 -->
       <li class="receber-item" style="--receber-color:#27AE60;">
         <div class="receber-item-icon-wrap">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
             <circle cx="9" cy="7" r="4"></circle>
             <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -1908,7 +1932,8 @@
       <!-- Card 5 -->
       <li class="receber-item" style="--receber-color:#9B51E0;">
         <div class="receber-item-icon-wrap">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
             <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
             <line x1="12" y1="18" x2="12.01" y2="18"></line>
           </svg>
@@ -1930,28 +1955,24 @@
           <img class="page-card-img" src="https://i.ibb.co/XZfVz2zB/produto-principal-pagina-01.jpg" alt="Página">
           <img class="page-card-img" src="https://i.ibb.co/S42c8K8R/bonus-1-pagina-01.jpg" alt="Página">
           <img class="page-card-img" src="https://i.ibb.co/zV5vG381/bonus-2-pagina-01.jpg" alt="Página">
-          <img class="page-card-img" src="https://i.ibb.co/xqXn0gfH/bonus-3-pagina-01.jpg"
-            alt="Página">
+          <img class="page-card-img" src="https://i.ibb.co/xqXn0gfH/bonus-3-pagina-01.jpg" alt="Página">
           <img class="page-card-img" src="https://i.ibb.co/GvKgvck8/bonus-4-pagina-01.jpg" alt="Página">
           <img class="page-card-img" src="https://i.ibb.co/xtcvVrj0/produto-principal-pagina-02.jpg" alt="Página">
           <img class="page-card-img" src="https://i.ibb.co/zHR1WrjM/bonus-1-pagina-02.jpg" alt="Página">
           <img class="page-card-img" src="https://i.ibb.co/kV57pynw/bonus-2-pagina-02.jpg" alt="Página">
-          <img class="page-card-img" src="https://i.ibb.co/JFMbb83M/bonus-3-pagina-02.jpg"
-            alt="Página">
+          <img class="page-card-img" src="https://i.ibb.co/JFMbb83M/bonus-3-pagina-02.jpg" alt="Página">
           <img class="page-card-img" src="https://i.ibb.co/Y7gZLtq8/bonus-4-pagina-02.jpg" alt="Página">
 
           <!-- Duplicado para loop infinito -->
           <img class="page-card-img" src="https://i.ibb.co/XZfVz2zB/produto-principal-pagina-01.jpg" alt="Página">
           <img class="page-card-img" src="https://i.ibb.co/S42c8K8R/bonus-1-pagina-01.jpg" alt="Página">
           <img class="page-card-img" src="https://i.ibb.co/zV5vG381/bonus-2-pagina-01.jpg" alt="Página">
-          <img class="page-card-img" src="https://i.ibb.co/xqXn0gfH/bonus-3-pagina-01.jpg"
-            alt="Página">
+          <img class="page-card-img" src="https://i.ibb.co/xqXn0gfH/bonus-3-pagina-01.jpg" alt="Página">
           <img class="page-card-img" src="https://i.ibb.co/GvKgvck8/bonus-4-pagina-01.jpg" alt="Página">
           <img class="page-card-img" src="https://i.ibb.co/xtcvVrj0/produto-principal-pagina-02.jpg" alt="Página">
           <img class="page-card-img" src="https://i.ibb.co/zHR1WrjM/bonus-1-pagina-02.jpg" alt="Página">
           <img class="page-card-img" src="https://i.ibb.co/kV57pynw/bonus-2-pagina-02.jpg" alt="Página">
-          <img class="page-card-img" src="https://i.ibb.co/JFMbb83M/bonus-3-pagina-02.jpg"
-            alt="Página">
+          <img class="page-card-img" src="https://i.ibb.co/JFMbb83M/bonus-3-pagina-02.jpg" alt="Página">
           <img class="page-card-img" src="https://i.ibb.co/Y7gZLtq8/bonus-4-pagina-02.jpg" alt="Página">
 
         </div>
@@ -1964,28 +1985,24 @@
           <img class="page-card-img" src="https://i.ibb.co/Ps6Z9Qrq/produto-principal-pagina-03.jpg" alt="Página">
           <img class="page-card-img" src="https://i.ibb.co/pvmsf1Lj/bonus-1-pagina-03.jpg" alt="Página">
           <img class="page-card-img" src="https://i.ibb.co/XZvvL09V/bonus-2-pagina-03.jpg" alt="Página">
-          <img class="page-card-img" src="https://i.ibb.co/w31pJQt/bonus-3-pagina-03.jpg"
-            alt="Página">
+          <img class="page-card-img" src="https://i.ibb.co/w31pJQt/bonus-3-pagina-03.jpg" alt="Página">
           <img class="page-card-img" src="https://i.ibb.co/HpzNGjXK/bonus-4-pagina-03.jpg" alt="Página">
           <img class="page-card-img" src="https://i.ibb.co/R4GhPjKB/produto-principal-pagina-04.jpg" alt="Página">
           <img class="page-card-img" src="https://i.ibb.co/fGMt7Cmt/bonus-1-pagina-04.jpg" alt="Página">
           <img class="page-card-img" src="https://i.ibb.co/hF0CFtRK/bonus-2-pagina-04.jpg" alt="Página">
-          <img class="page-card-img" src="https://i.ibb.co/X9pkts2/bonus-3-pagina-04.jpg"
-            alt="Página">
+          <img class="page-card-img" src="https://i.ibb.co/X9pkts2/bonus-3-pagina-04.jpg" alt="Página">
           <img class="page-card-img" src="https://i.ibb.co/tpYdXKRP/bonus-4-pagina-04.jpg" alt="Página">
 
           <!-- Duplicado para loop infinito -->
           <img class="page-card-img" src="https://i.ibb.co/Ps6Z9Qrq/produto-principal-pagina-03.jpg" alt="Página">
           <img class="page-card-img" src="https://i.ibb.co/pvmsf1Lj/bonus-1-pagina-03.jpg" alt="Página">
           <img class="page-card-img" src="https://i.ibb.co/XZvvL09V/bonus-2-pagina-03.jpg" alt="Página">
-          <img class="page-card-img" src="https://i.ibb.co/w31pJQt/bonus-3-pagina-03.jpg"
-            alt="Página">
+          <img class="page-card-img" src="https://i.ibb.co/w31pJQt/bonus-3-pagina-03.jpg" alt="Página">
           <img class="page-card-img" src="https://i.ibb.co/HpzNGjXK/bonus-4-pagina-03.jpg" alt="Página">
           <img class="page-card-img" src="https://i.ibb.co/R4GhPjKB/produto-principal-pagina-04.jpg" alt="Página">
           <img class="page-card-img" src="https://i.ibb.co/fGMt7Cmt/bonus-1-pagina-04.jpg" alt="Página">
           <img class="page-card-img" src="https://i.ibb.co/hF0CFtRK/bonus-2-pagina-04.jpg" alt="Página">
-          <img class="page-card-img" src="https://i.ibb.co/X9pkts2/bonus-3-pagina-04.jpg"
-            alt="Página">
+          <img class="page-card-img" src="https://i.ibb.co/X9pkts2/bonus-3-pagina-04.jpg" alt="Página">
           <img class="page-card-img" src="https://i.ibb.co/tpYdXKRP/bonus-4-pagina-04.jpg" alt="Página">
 
         </div>
@@ -1998,7 +2015,9 @@
        5. SEÇÃO: BÔNUS GRATUITOS
        ================================================== -->
   <section class="bonus-section">
-    <h2 class="section-title">Você também recebe <span class="destaque-titulo" style="--title-color: #F5A623; --underline-grad: linear-gradient(90deg, rgba(245, 166, 35, 0.1) 0%, rgba(245, 166, 35, 1) 100%);">4 bônus gratuitos</span></h2>
+    <h2 class="section-title">Você também recebe <span class="destaque-titulo"
+        style="--title-color: #F5A623; --underline-grad: linear-gradient(90deg, rgba(245, 166, 35, 0.1) 0%, rgba(245, 166, 35, 1) 100%);">4
+        bônus gratuitos</span></h2>
     <p class="section-subtitle">Além do material principal, você terá acesso a materiais complementares criados para
       apoiar ainda mais a rotina familiar e a aplicação das técnicas.</p>
 
@@ -2148,7 +2167,9 @@
        6. SEÇÃO DE PLANOS
        ================================================== -->
   <section class="planos-section" id="planos">
-    <h2 class="section-title">Escolha a <span class="destaque-titulo" style="--title-color: #9B51E0; --underline-grad: linear-gradient(90deg, rgba(155, 81, 224, 0.1) 0%, rgba(155, 81, 224, 1) 100%);">melhor opção</span> para você</h2>
+    <h2 class="section-title">Escolha a <span class="destaque-titulo"
+        style="--title-color: #9B51E0; --underline-grad: linear-gradient(90deg, rgba(155, 81, 224, 0.1) 0%, rgba(155, 81, 224, 1) 100%);">melhor
+        opção</span> para você</h2>
     <p class="section-subtitle">Você pode começar apenas com o material principal ou escolher a opção completa com todos
       os bônus inclusos.</p>
 
@@ -2370,13 +2391,13 @@
        ================================================== -->
   <section class="garantia-section">
     <!-- Imagem de selo de garantia -->
-    <img src="https://i.ibb.co/2YnY3rnD/image.png" alt="Garantia de 30 dias"
+    <img src="https://i.ibb.co/2YnY3rnD/image.png" alt="Garantia de 7 dias"
       style="max-width: 220px; width: 100%; display: block; margin: 0 auto 16px auto;">
 
     <div class="garantia-box">
       <span class="garantia-tag">Garantia Incondicional</span>
       <h3>Sua Satisfação é Prioridade</h3>
-      <p>Se em até 30 dias você não amar a experiência com o material, <span class="sublinhado-amarelo">devolvemos 100%
+      <p>Se em até 7 dias você não amar a experiência com o material, <span class="sublinhado-amarelo">devolvemos 100%
           do seu</span> <span class="sublinhado-amarelo">dinheiro.</span> Sem perguntas, sem burocracia.</p>
     </div>
   </section>
@@ -2385,7 +2406,9 @@
        8. FAQ (PERGUNTAS FREQUENTES)
        ================================================== -->
   <section class="faq-section">
-    <h2 class="section-title"><span class="destaque-titulo" style="--title-color: #27AE60; --underline-grad: linear-gradient(90deg, rgba(39, 174, 96, 0.1) 0%, rgba(39, 174, 96, 1) 100%);">Perguntas frequentes</span></h2>
+    <h2 class="section-title"><span class="destaque-titulo"
+        style="--title-color: #27AE60; --underline-grad: linear-gradient(90deg, rgba(39, 174, 96, 0.1) 0%, rgba(39, 174, 96, 1) 100%);">Perguntas
+        frequentes</span></h2>
     <p class="section-subtitle">Tire suas dúvidas rápidas sobre o material e a forma de acesso.</p>
 
     <div class="faq-container">
@@ -2455,7 +2478,7 @@
           </svg>
         </button>
         <div class="faq-content">
-          <p>Sim. Você conta com 30 dias de garantia incondicional para avaliar o material com tranquilidade.</p>
+          <p>Sim. Você conta com 7 dias de garantia incondicional para avaliar o material com tranquilidade.</p>
         </div>
       </div>
 
@@ -2577,10 +2600,10 @@
     function getUrlWithUtms(baseUrl) {
       const currentParams = window.location.search;
       if (!currentParams) return baseUrl;
-      
+
       const url = new URL(baseUrl);
       const searchParams = new URLSearchParams(currentParams);
-      
+
       searchParams.forEach((value, key) => {
         url.searchParams.set(key, value);
       });
