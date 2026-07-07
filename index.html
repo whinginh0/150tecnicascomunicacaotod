@@ -1275,8 +1275,18 @@
       font-size: 36px;
       font-weight: 900;
       color: var(--preto);
-      line-height: 1.1;
+      line-height: 1;
       margin-top: 2px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1px;
+    }
+
+    .plano-preco-valor span {
+      display: block;
+      white-space: nowrap;
+      line-height: 1.2;
     }
 
     .plano-seguro-label {
@@ -1715,6 +1725,86 @@
       font-weight: 700;
       margin-bottom: 12px;
       color: var(--branco);
+    }
+
+    /* Botão Flutuante de Suporte (Ícone Grande + Balão) */
+    .btn-suporte-flutuante {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+    .btn-suporte-flutuante:hover {
+      transform: translateY(-3px);
+    }
+    .btn-suporte-flutuante img {
+      width: 75px;
+      height: 75px;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
+      transition: transform 0.2s ease;
+    }
+    .btn-suporte-flutuante:hover img {
+      transform: scale(1.08);
+    }
+    .suporte-tooltip {
+      background-color: #2D2D2D;
+      color: #FFFFFF;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 13px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      white-space: nowrap;
+      position: relative;
+      border: 2px solid var(--amarelo-destaque);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    /* Seta do balão de diálogo */
+    .suporte-tooltip::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -8px;
+      transform: translateY(-50%);
+      border-width: 8px 0 8px 8px;
+      border-style: solid;
+      border-color: transparent transparent transparent var(--amarelo-destaque);
+    }
+    .suporte-tooltip::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -6px;
+      transform: translateY(-50%);
+      border-width: 6px 0 6px 6px;
+      border-style: solid;
+      border-color: transparent transparent transparent #2D2D2D;
+      z-index: 1;
+    }
+
+    /* Responsividade para telas menores */
+    @media (max-width: 768px) {
+      .btn-suporte-flutuante {
+        bottom: 16px;
+        right: 16px;
+        gap: 8px;
+      }
+      .btn-suporte-flutuante img {
+        width: 60px;
+        height: 60px;
+      }
+      .suporte-tooltip {
+        padding: 6px 10px;
+        font-size: 11px;
+      }
     }
   </style>
 </head>
@@ -2208,6 +2298,12 @@
             </svg>
             <span>Pagamento único</span>
           </li>
+          <li class="plano-feature-item inclui">
+            <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Acesso enviado através do e-mail de compra</span>
+          </li>
           <li class="plano-feature-item nao-inclui">
             <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
               <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -2286,6 +2382,12 @@
               <polyline points="20 6 9 17 4 12"></polyline>
             </svg>
             <span>Pagamento único</span>
+          </li>
+          <li class="plano-feature-item inclui">
+            <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Acesso enviado através do e-mail de compra</span>
           </li>
         </ul>
 
@@ -2422,8 +2524,8 @@
           </svg>
         </button>
         <div class="faq-content">
-          <p>O acesso ao material é digital e será enviado conforme as instruções da plataforma de compra após a
-            confirmação do pagamento.</p>
+          <p>O acesso ao material é digital e será enviado para o seu e-mail conforme as instruções da plataforma de compra após a
+            confirmação do pagamento. Certifique-se de verificar também a sua caixa de spam.</p>
         </div>
       </div>
 
@@ -2660,6 +2762,12 @@
       });
     });
   </script>
+  <!-- Botão Flutuante de Suporte -->
+  <a href="https://www.instagram.com/todilustrado/" target="_blank" rel="noopener noreferrer" class="btn-suporte-flutuante" id="btn-suporte-flutuante">
+    <div class="suporte-tooltip">Suporte</div>
+    <img src="https://i.ibb.co/LdFnsfZp/image.png" alt="Suporte">
+  </a>
+
 </body>
 
 </html>
